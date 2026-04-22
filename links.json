@@ -180,6 +180,15 @@
     "addedAt": "2026-04-22T11:35:00"
   },
   {
+    "id": "stable-diffusion-webui",
+    "title": "Stable Diffusion web UI",
+    "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+    "description": "Interface web para Stable Diffusion com suporte a txt2img, img2img, inpainting, upscaling e centenas de extensões. O projeto mais popular para rodar modelos de difusão localmente.",
+    "thumbnail": "https://picsum.photos/seed/stable-diffusion-webui/400/225",
+    "tags": ["#ai", "#generative-ai", "#open-source", "#self-hosted", "#tools", "#image-generation"],
+    "addedAt": "2026-04-22T16:05:00"
+  },
+  {
     "id": "comfyui",
     "title": "ComfyUI",
     "url": "https://www.comfy.org/",
