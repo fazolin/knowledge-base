@@ -112,6 +112,22 @@
     "addedAt": "2026-04-22"
   },
   {
+    "id": "streamdiffusion",
+    "title": "StreamDiffusion",
+    "url": "https://github.com/cumulo-autumn/streamdiffusion",
+    "description": "Pipeline de difusão otimizado para geração de imagens interativa em tempo real. Usa processamento em batch, cache inteligente e aceleração GPU para rodar modelos de difusão com latência mínima — ideal para inputs ao vivo como webcam e screen capture.",
+    "tags": ["#ai", "#generative-ai", "#real-time", "#image-generation", "#open-source", "#creative-coding"],
+    "addedAt": "2026-04-22"
+  },
+  {
+    "id": "streamdiffusion-td",
+    "title": "StreamDiffusionTD",
+    "url": "https://dotsimulate.com/docs/streamdiffusiontd",
+    "description": "Operador TouchDesigner que conecta inputs em tempo real (câmera, áudio, sensores) ao StreamDiffusion. Suporta SDXL-Turbo, ControlNet, IP Adapter, TensorRT e video-to-video com consistência temporal.",
+    "tags": ["#touchdesigner", "#ai", "#generative-ai", "#real-time", "#creative-coding", "#interactive", "#tools"],
+    "addedAt": "2026-04-22"
+  },
+  {
     "id": "mediapipe-touchdesigner",
     "title": "MediaPipe TouchDesigner Plugin",
     "url": "https://github.com/torinmb/mediapipe-touchdesigner",
