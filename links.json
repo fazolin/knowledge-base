@@ -4,7 +4,7 @@
     "title": "Open Generative AI",
     "url": "https://github.com/Anil-matcha/Open-Generative-AI",
     "description": "Estúdio de IA open-source e self-hostable para geração de imagens, vídeos e animações. Acesso a 200+ modelos (Flux, Midjourney, Kling, Sora) sem filtros de conteúdo ou assinatura.",
-    "thumbnail": "https://github.com/Anil-matcha.png",
+    "thumbnail": "https://loremflickr.com/800/450/artificial-intelligence,generative",
     "tags": ["#ai", "#generative-ai", "#open-source", "#image-generation", "#video-generation", "#self-hosted", "#tools"],
     "addedAt": "2026-04-22"
   },
@@ -76,7 +76,7 @@
     "title": "n8n",
     "url": "https://github.com/n8n-io/n8n",
     "description": "Plataforma visual e extensível para automações, integrações, agentes e workflows com forte comunidade open-source.",
-    "thumbnail": "https://github.com/n8n-io.png",
+    "thumbnail": "https://loremflickr.com/800/450/automation,workflow",
     "tags": ["#automation", "#workflow", "#open-source", "#self-hosted", "#no-code", "#professional"],
     "addedAt": "2026-04-22"
   },
@@ -85,7 +85,7 @@
     "title": "Postiz",
     "url": "https://github.com/gitroomhq/postiz-app",
     "description": "Plataforma open-source para agendamento social, analytics, colaboração e publicação multi-canal.",
-    "thumbnail": "https://github.com/gitroomhq.png",
+    "thumbnail": "https://loremflickr.com/800/450/social-media,publishing",
     "tags": ["#social-media", "#open-source", "#self-hosted", "#marketing", "#tools"],
     "addedAt": "2026-04-22"
   },
@@ -94,7 +94,7 @@
     "title": "Ghost",
     "url": "https://github.com/TryGhost/Ghost",
     "description": "Stack editorial moderna para blog, newsletter, memberships e distribuição de conteúdo.",
-    "thumbnail": "https://github.com/TryGhost.png",
+    "thumbnail": "https://loremflickr.com/800/450/editorial,writing,blog",
     "tags": ["#cms", "#blog", "#newsletter", "#open-source", "#self-hosted", "#content"],
     "addedAt": "2026-04-22"
   },
@@ -112,7 +112,7 @@
     "title": "Firecrawl",
     "url": "https://github.com/mendableai/firecrawl",
     "description": "Faz busca, scraping e interação com a web em formato pronto para agentes de IA.",
-    "thumbnail": "https://github.com/mendableai.png",
+    "thumbnail": "https://loremflickr.com/800/450/web,data,spider",
     "tags": ["#scraping", "#crawling", "#ai", "#open-source", "#developer-tools", "#professional"],
     "addedAt": "2026-04-22"
   },
@@ -121,7 +121,7 @@
     "title": "Kestra",
     "url": "https://github.com/kestra-io/kestra",
     "description": "Orquestrador declarativo para pipelines, jobs, ETL leve e fluxos criativos com estado.",
-    "thumbnail": "https://github.com/kestra-io.png",
+    "thumbnail": "https://loremflickr.com/800/450/pipeline,data,engineering",
     "tags": ["#orchestration", "#workflow", "#etl", "#open-source", "#self-hosted", "#professional"],
     "addedAt": "2026-04-22"
   },
