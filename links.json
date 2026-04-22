@@ -180,6 +180,15 @@
     "addedAt": "2026-04-22T11:35:00"
   },
   {
+    "id": "gsap-skills",
+    "title": "GSAP Skills",
+    "url": "https://github.com/greensock/gsap-skills",
+    "description": "Skills oficiais do GSAP para agentes de IA. Ensina coding agents (Claude Code, Cursor, Copilot etc.) a usar corretamente o GreenSock Animation Platform — boas práticas, ScrollTrigger, plugins e padrões de animação.",
+    "thumbnail": "https://picsum.photos/seed/gsap-skills/400/225",
+    "tags": ["#frontend", "#animation", "#developer-tools", "#claude-code", "#gsap", "#open-source"],
+    "addedAt": "2026-04-22T16:25:00"
+  },
+  {
     "id": "stable-diffusion-webui-forge",
     "title": "Stable Diffusion WebUI Forge",
     "url": "https://github.com/lllyasviel/stable-diffusion-webui-forge",
