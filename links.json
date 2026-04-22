@@ -180,6 +180,15 @@
     "addedAt": "2026-04-22T11:35:00"
   },
   {
+    "id": "comfyui",
+    "title": "ComfyUI",
+    "url": "https://www.comfy.org/",
+    "description": "Plataforma node-based open-source para geração visual com IA. Permite criar, salvar e compartilhar workflows completos para imagem, vídeo, 3D e áudio com controle total sobre o pipeline.",
+    "thumbnail": "https://picsum.photos/seed/comfyui/400/225",
+    "tags": ["#ai", "#generative-ai", "#open-source", "#tools", "#creative-coding", "#image-generation", "#comfyui", "#workflow"],
+    "addedAt": "2026-04-22T16:00:00"
+  },
+  {
     "id": "ai-render-engine-comfyui",
     "title": "We Built an AI Render Engine for FREE",
     "url": "https://www.youtube.com/watch?v=0WkixvqnPXw",
