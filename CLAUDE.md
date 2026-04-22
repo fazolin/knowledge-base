@@ -15,11 +15,17 @@ All links live in `links.json` at the root. Each entry follows this shape:
   "id": "unique-slug",
   "title": "Human-readable title",
   "url": "https://...",
-  "description": "Optional short description",
+  "description": "Breve descrição em português.",
+  "thumbnail": "https://...",
   "tags": ["#professional", "#design", "#reference"],
   "addedAt": "2026-04-22"
 }
 ```
+
+For `thumbnail`:
+- GitHub repos: use `https://github.com/<owner>.png`
+- Instagram: user must provide a screenshot; store a local path or skip the field
+- Other sites: try fetching the `og:image` meta tag from the page
 
 Tags use the `#hashtag` convention. Categories are derived from tags — no separate category field.
 

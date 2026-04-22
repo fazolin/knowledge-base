@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "id": "open-generative-ai",
+    "title": "Open Generative AI",
+    "url": "https://github.com/Anil-matcha/Open-Generative-AI",
+    "description": "Estúdio de IA open-source e self-hostable para geração de imagens, vídeos e animações. Acesso a 200+ modelos (Flux, Midjourney, Kling, Sora) sem filtros de conteúdo ou assinatura.",
+    "thumbnail": "https://github.com/Anil-matcha.png",
+    "tags": ["#ai", "#generative-ai", "#open-source", "#image-generation", "#video-generation", "#self-hosted", "#tools"],
+    "addedAt": "2026-04-22"
+  }
+]
