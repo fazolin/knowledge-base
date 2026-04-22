@@ -25,6 +25,7 @@ All links live in `links.json` at the root:
   "title": "Human-readable title",
   "url": "https://...",
   "description": "Breve descrição em português.",
+  "thumbnail": "https://...",
   "tags": ["#tag1", "#tag2"],
   "addedAt": "2026-04-22T15:30:00"
 }
@@ -37,14 +38,14 @@ All links live in `links.json` at the root:
 | `id` | kebab-case slug, unique, derived from title or repo name |
 | `title` | Original name of the tool/project/resource |
 | `description` | 1–2 sentences in **Portuguese**, what it is and why it matters |
-| `thumbnail` | See thumbnail rules below — optional field |
+| `thumbnail` | Required. See thumbnail rules below |
 | `tags` | Array of `#hashtag` strings. Use existing tags when possible |
 | `addedAt` | Date and time of insertion in `YYYY-MM-DDTHH:MM:SS` format (e.g. `2026-04-22T15:30:00`). Always use the current date and time. |
 
 ### Thumbnail rules
 
 - **YouTube videos** → `https://img.youtube.com/vi/{VIDEO_ID}/hqdefault.jpg`
-- **Any other link** → omit the `thumbnail` field entirely; the UI generates a unique gradient per card automatically
+- **Any other link** → `https://picsum.photos/seed/{id}/400/225` (use the entry's `id` as seed)
 - Never use LoremFlickr, Unsplash source, or GitHub avatars — they are slow or return duplicates
 
 ### Tags convention
