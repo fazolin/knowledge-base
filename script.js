@@ -11,7 +11,7 @@ async function init() {
 
 function buildQR() {
   const url = window.location.href;
-  const api = `https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=${encodeURIComponent(url)}&bgcolor=101010&color=888888&margin=4&format=svg`;
+  const api = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(url)}&bgcolor=101010&color=f4f4f4&margin=6&format=svg`;
   document.getElementById('qr-img').src = api;
   document.getElementById('qr-link').href = url;
 }
