@@ -4,102 +4,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Caio Fazolin · Knowledge Base</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0c0c0c;
-      --surface: #141414;
-      --border: #252525;
-      --border-hover: #3a3a3a;
-      --text: #e8e8e8;
-      --muted: #5a5a5a;
-      --muted-2: #333;
-      --radius: 12px;
+      --bg: #111111;
+      --surface: #1c1c1c;
+      --surface-2: #242424;
+      --border: rgba(255,255,255,0.07);
+      --border-hover: rgba(255,255,255,0.14);
+      --text: #f0f0f0;
+      --muted: #666;
+      --muted-2: #3a3a3a;
+      --radius: 14px;
       --gap: 14px;
     }
 
     html { color-scheme: dark; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ─── HEADER ─── */
     .header {
-      max-width: 1280px;
+      max-width: 1320px;
       margin: 0 auto;
-      padding: 52px 28px 0;
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
+      padding: 56px 32px 0;
     }
 
-    .brand { display: flex; flex-direction: column; gap: 3px; }
-
-    .brand-sub {
-      font-size: 11px;
+    .brand-eyebrow {
+      font-size: 10px;
       font-weight: 600;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--muted);
+      margin-bottom: 6px;
     }
 
     .brand-title {
-      font-size: 28px;
+      font-size: 36px;
       font-weight: 800;
-      letter-spacing: -0.8px;
+      letter-spacing: -1.2px;
       line-height: 1;
       color: var(--text);
+      margin-bottom: 24px;
+    }
+
+    .header-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
     #search {
+      flex: 1;
+      max-width: 360px;
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 9px;
+      border-radius: 10px;
       color: var(--text);
+      font-family: inherit;
       font-size: 13px;
+      font-weight: 400;
       outline: none;
-      padding: 9px 15px;
-      width: 220px;
-      transition: border-color 0.15s, width 0.2s ease;
-      align-self: flex-end;
+      padding: 10px 16px;
+      transition: border-color 0.15s;
     }
 
     #search::placeholder { color: var(--muted); }
-    #search:focus { border-color: var(--border-hover); width: 260px; }
+    #search:focus { border-color: var(--border-hover); }
 
-    /* ─── TABS ─── */
-    .tabs-track {
-      max-width: 1280px;
-      margin: 24px auto 0;
+    .header-count {
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
     }
 
-    .tabs-scroll {
+    .tags-wrap {
+      max-width: 1320px;
+      margin: 20px auto 0;
+      padding: 0 32px;
       display: flex;
+      flex-wrap: wrap;
       gap: 6px;
-      overflow-x: auto;
-      overflow-y: hidden;
-      -webkit-overflow-scrolling: touch;
-      padding: 0 28px 10px;
-      scrollbar-width: none;
     }
 
-    .tabs-scroll::-webkit-scrollbar { display: none; }
-
-    .tab {
-      flex-shrink: 0;
-      padding: 5px 13px;
-      border-radius: 7px;
+    .tag-btn {
+      padding: 5px 12px;
+      border-radius: 6px;
       border: 1px solid var(--border);
       background: transparent;
       color: var(--muted);
+      font-family: inherit;
       font-size: 12px;
       font-weight: 500;
       cursor: pointer;
@@ -107,51 +110,45 @@
       white-space: nowrap;
     }
 
-    .tab:hover { color: var(--text); border-color: var(--border-hover); }
+    .tag-btn:hover { color: var(--text); border-color: var(--border-hover); }
 
-    .tab.active {
+    .tag-btn.active {
       background: var(--text);
       color: var(--bg);
       border-color: var(--text);
     }
 
-    .tab-count {
-      margin-left: 5px;
+    .tag-btn-count {
+      margin-left: 4px;
       font-size: 10px;
-      opacity: 0.45;
+      opacity: 0.4;
     }
 
-    /* ─── MAIN ─── */
     main {
-      max-width: 1280px;
+      max-width: 1320px;
       margin: 0 auto;
-      padding: 28px 28px 80px;
+      padding: 32px 32px 80px;
     }
 
-    /* ─── MONTH GROUP ─── */
-    .month-group { margin-bottom: 44px; }
+    .month-group { margin-bottom: 48px; }
 
     .month-header {
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 18px;
+      gap: 12px;
+      margin-bottom: 20px;
     }
 
     .month-label {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--muted);
       white-space: nowrap;
     }
 
-    .month-line {
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
+    .month-line { flex: 1; height: 1px; background: var(--border); }
 
     .month-count {
       font-size: 10px;
@@ -159,129 +156,99 @@
       white-space: nowrap;
     }
 
-    /* ─── GRID ─── */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: var(--gap);
+    .masonry {
+      column-count: 4;
+      column-gap: var(--gap);
     }
 
-    /* ─── CARD ─── */
     .card {
+      break-inside: avoid;
+      display: block;
+      width: 100%;
+      margin-bottom: var(--gap);
       background: var(--surface);
       border-radius: var(--radius);
       border: 1px solid var(--border);
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
       text-decoration: none;
       color: inherit;
-      transition: border-color 0.15s, transform 0.15s;
-      position: relative;
+      transition: border-color 0.15s, transform 0.18s;
     }
 
     .card:hover {
       border-color: var(--border-hover);
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
 
-    /* ─── MEDIA ─── */
-    .card-media {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      flex-shrink: 0;
-      position: relative;
-    }
+    .card-img-wrap { width: 100%; overflow: hidden; }
 
     .card-img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
       display: block;
+      aspect-ratio: 16/9;
+      object-fit: cover;
     }
 
     .card-nothumb {
       width: 100%;
-      height: 100%;
+      height: 130px;
       position: relative;
       overflow: hidden;
       display: flex;
-      align-items: flex-end;
-      padding: 12px;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
 
-    .nothumb-bg {
+    .nt-bg { position: absolute; inset: 0; }
+
+    .nt-overlay {
       position: absolute;
       inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.35) 100%);
     }
 
-    .nothumb-noise {
-      position: absolute;
-      inset: 0;
-      opacity: 0.04;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-      background-size: 200px;
-    }
-
-    .nothumb-glyph {
-      position: absolute;
-      top: -10px;
-      right: -6px;
-      font-size: 96px;
-      font-weight: 900;
-      line-height: 1;
-      color: rgba(255,255,255,0.06);
-      pointer-events: none;
-      user-select: none;
-      letter-spacing: -4px;
-    }
-
-    .nothumb-domain {
+    .nt-domain {
       position: relative;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.07em;
-      color: rgba(255,255,255,0.35);
-      text-transform: lowercase;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: rgba(255,255,255,0.18);
+      text-align: center;
+      word-break: break-all;
+      line-height: 1.2;
     }
 
-    /* ─── CARD BODY ─── */
     .card-body {
-      padding: 13px 14px 14px;
-      flex: 1;
+      padding: 14px 16px 16px;
       display: flex;
       flex-direction: column;
-      gap: 7px;
+      gap: 8px;
     }
 
     .card-title {
       font-size: 13px;
       font-weight: 600;
-      line-height: 1.4;
+      line-height: 1.45;
       color: var(--text);
     }
 
     .card-desc {
       font-size: 12px;
+      font-weight: 400;
       color: var(--muted);
-      line-height: 1.6;
-      flex: 1;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      line-height: 1.65;
     }
 
-    .card-footer {
+    .card-meta {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 6px;
+      gap: 8px;
       margin-top: 2px;
     }
 
-    .card-tags {
+    .card-pills {
       display: flex;
       flex-wrap: wrap;
       gap: 4px;
@@ -289,18 +256,19 @@
       min-width: 0;
     }
 
-    .tag-pill {
+    .pill {
       font-size: 10px;
-      padding: 2px 7px;
+      font-weight: 500;
+      padding: 2px 8px;
       border-radius: 4px;
-      background: rgba(255,255,255,0.05);
-      color: var(--muted);
+      background: rgba(255,255,255,0.04);
       border: 1px solid var(--border);
+      color: var(--muted);
       white-space: nowrap;
     }
 
     .card-arrow {
-      font-size: 13px;
+      font-size: 14px;
       color: var(--muted-2);
       flex-shrink: 0;
       opacity: 0;
@@ -310,109 +278,98 @@
     .card:hover .card-arrow { opacity: 1; }
 
     .empty {
-      grid-column: 1 / -1;
       padding: 80px 0;
       text-align: center;
       color: var(--muted);
       font-size: 14px;
     }
 
-    @media (max-width: 1100px) {
-      .grid { grid-template-columns: repeat(3, 1fr); }
-    }
+    @media (max-width: 1100px) { .masonry { column-count: 3; } }
 
     @media (max-width: 768px) {
-      .grid { grid-template-columns: repeat(2, 1fr); }
-      .header { padding: 36px 20px 0; }
-      .tabs-scroll { padding: 0 20px 10px; }
+      .masonry { column-count: 2; }
+      .header { padding: 40px 20px 0; }
+      .tags-wrap { padding: 0 20px; }
       main { padding: 24px 20px 60px; }
-      .brand-title { font-size: 24px; }
-      #search { width: 160px; }
-      #search:focus { width: 190px; }
+      .brand-title { font-size: 28px; }
     }
 
     @media (max-width: 480px) {
-      .grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-      .header { padding: 28px 16px 0; flex-direction: column; align-items: flex-start; }
-      .tabs-scroll { padding: 0 16px 10px; }
+      .masonry { column-count: 2; }
+      .header { padding: 28px 16px 0; }
+      .brand-title { font-size: 24px; letter-spacing: -0.8px; }
+      .tags-wrap { padding: 0 16px; }
       main { padding: 20px 16px 60px; }
-      .brand-title { font-size: 22px; }
-      #search { width: 100%; }
-      #search:focus { width: 100%; }
-      .card-desc { -webkit-line-clamp: 2; }
+      #search { max-width: 100%; }
     }
 
-    @media (max-width: 360px) {
-      .grid { grid-template-columns: 1fr; }
+    @media (max-width: 380px) {
+      .masonry { column-count: 1; }
     }
   </style>
 </head>
 <body>
 
 <div class="header">
-  <div class="brand">
-    <span class="brand-sub">Caio Fazolin</span>
-    <h1 class="brand-title">Knowledge Base</h1>
+  <p class="brand-eyebrow">Caio Fazolin</p>
+  <h1 class="brand-title">Knowledge Base</h1>
+  <div class="header-bar">
+    <input type="text" id="search" placeholder="Buscar links, tags ou descrições...">
+    <span class="header-count" id="count"></span>
   </div>
-  <input type="text" id="search" placeholder="Buscar...">
 </div>
 
-<div class="tabs-track">
-  <div class="tabs-scroll" id="tabs"></div>
-</div>
+<div class="tags-wrap" id="tags"></div>
 
 <main id="main"></main>
 
 <script>
   const MONTHS = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
 
-  let allLinks = [];
-  let activeTag = 'all';
-  let query = '';
+  let all = [], activeTag = 'all', q = '';
 
   async function init() {
-    const res = await fetch('links.json');
-    allLinks = await res.json();
-    buildTabs();
+    all = await fetch('links.json').then(r => r.json());
+    buildTags();
     render();
   }
 
-  function buildTabs() {
+  function buildTags() {
     const counts = {};
-    allLinks.forEach(l => l.tags.forEach(t => { counts[t] = (counts[t]||0)+1; }));
+    all.forEach(l => l.tags.forEach(t => { counts[t] = (counts[t]||0)+1; }));
     const sorted = Object.entries(counts).sort((a,b) => b[1]-a[1]);
-    const nav = document.getElementById('tabs');
-    nav.innerHTML = '';
-    nav.appendChild(tab('all','Tudo',allLinks.length));
-    sorted.forEach(([t,n]) => nav.appendChild(tab(t, t.replace('#',''), n)));
+    const wrap = document.getElementById('tags');
+    wrap.innerHTML = '';
+    wrap.appendChild(tagBtn('all','Tudo',all.length));
+    sorted.forEach(([t,n]) => wrap.appendChild(tagBtn(t, t.replace('#',''), n)));
   }
 
-  function tab(value, label, count) {
-    const btn = document.createElement('button');
-    btn.className = 'tab' + (value === activeTag ? ' active' : '');
-    btn.innerHTML = `${label}<span class="tab-count">${count}</span>`;
-    btn.onclick = () => {
+  function tagBtn(value, label, count) {
+    const b = document.createElement('button');
+    b.className = 'tag-btn' + (value === activeTag ? ' active' : '');
+    b.innerHTML = `${label}<span class="tag-btn-count">${count}</span>`;
+    b.onclick = () => {
       activeTag = value;
-      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-      btn.classList.add('active');
+      document.querySelectorAll('.tag-btn').forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
       render();
     };
-    return btn;
+    return b;
   }
 
   function render() {
-    const q = query.toLowerCase();
-    const filtered = allLinks.filter(l => {
-      const matchTag = activeTag === 'all' || l.tags.includes(activeTag);
-      const matchQ = !q
-        || l.title.toLowerCase().includes(q)
-        || (l.description||'').toLowerCase().includes(q)
-        || l.tags.some(t => t.toLowerCase().includes(q));
-      return matchTag && matchQ;
+    const sq = q.toLowerCase();
+    const filtered = all.filter(l => {
+      const mt = activeTag === 'all' || l.tags.includes(activeTag);
+      const mq = !sq || l.title.toLowerCase().includes(sq)
+        || (l.description||'').toLowerCase().includes(sq)
+        || l.tags.some(t => t.toLowerCase().includes(sq));
+      return mt && mq;
     });
 
-    const main = document.getElementById('main');
+    document.getElementById('count').textContent = `${filtered.length} item${filtered.length !== 1 ? 's' : ''}`;
 
+    const main = document.getElementById('main');
     if (!filtered.length) {
       main.innerHTML = '<div class="empty">Nenhum resultado encontrado.</div>';
       return;
@@ -421,105 +378,87 @@
     const groups = {};
     filtered.forEach(l => {
       const d = new Date(l.addedAt + 'T12:00:00');
-      const key = `${d.getFullYear()}-${String(d.getMonth()).padStart(2,'0')}`;
-      if (!groups[key]) groups[key] = { year: d.getFullYear(), month: d.getMonth(), items: [] };
-      groups[key].items.push(l);
+      const k = `${d.getFullYear()}-${String(d.getMonth()).padStart(2,'0')}`;
+      if (!groups[k]) groups[k] = { year: d.getFullYear(), month: d.getMonth(), items: [] };
+      groups[k].items.push(l);
     });
 
     main.innerHTML = '';
-    Object.keys(groups).sort().reverse().forEach(key => {
-      const { year, month, items } = groups[key];
+    Object.keys(groups).sort().reverse().forEach(k => {
+      const { year, month, items } = groups[k];
       const sec = document.createElement('div');
       sec.className = 'month-group';
       sec.innerHTML = `
         <div class="month-header">
-          <span class="month-label">${MONTHS[month]} ${year}</span>
+          <span class="month-label">${MONTHS[month]} · ${year}</span>
           <div class="month-line"></div>
           <span class="month-count">${items.length} ${items.length === 1 ? 'item' : 'itens'}</span>
         </div>
-        <div class="grid"></div>
+        <div class="masonry"></div>
       `;
-      const grid = sec.querySelector('.grid');
-      items.forEach(l => grid.appendChild(card(l)));
+      const grid = sec.querySelector('.masonry');
+      items.forEach(l => grid.appendChild(makeCard(l)));
       main.appendChild(sec);
     });
   }
 
-  function gradient(id) {
+  function grad(id) {
     let h = 0;
     for (let i = 0; i < id.length; i++) h = (id.charCodeAt(i) + ((h<<5)-h))|0;
-    const hue = ((h>>>0) % 280) + 30;
-    const hue2 = (hue + 55) % 360;
-    return `linear-gradient(135deg, hsl(${hue},48%,20%) 0%, hsl(${hue2},38%,11%) 100%)`;
+    const hue = ((h>>>0) % 300) + 20;
+    return `linear-gradient(140deg, hsl(${hue},45%,22%) 0%, hsl(${(hue+70)%360},35%,12%) 100%)`;
   }
 
-  function domain(url) {
-    try { return new URL(url).hostname.replace('www.',''); }
-    catch { return ''; }
+  function host(url) {
+    try { return new URL(url).hostname.replace('www.',''); } catch { return ''; }
   }
 
-  window.imgError = function(img, id, dom) {
-    const g = gradient(id);
-    const init = dom ? dom[0].toUpperCase() : '?';
-    img.parentElement.innerHTML = `
-      <div class="card-nothumb">
-        <div class="nothumb-bg" style="background:${g}"></div>
-        <div class="nothumb-noise"></div>
-        <span class="nothumb-glyph">${init}</span>
-        <span class="nothumb-domain">${dom}</span>
-      </div>`;
+  window.onImgErr = (img, id, h) => {
+    img.closest('.card-img-wrap').innerHTML = noThumb(id, h);
   };
 
-  function card(l) {
+  function noThumb(id, h) {
+    return `<div class="card-nothumb">
+      <div class="nt-bg" style="background:${grad(id)}"></div>
+      <div class="nt-overlay"></div>
+      <span class="nt-domain">${h}</span>
+    </div>`;
+  }
+
+  function makeCard(l) {
     const a = document.createElement('a');
     a.className = 'card';
     a.href = l.url;
     a.target = '_blank';
     a.rel = 'noopener';
 
-    const dom = domain(l.url);
-    const g = gradient(l.id);
-    const init = l.title[0].toUpperCase();
+    const h = host(l.url);
+    const pills = l.tags.slice(0,3).map(t =>
+      `<span class="pill">${t.replace('#','')}</span>`).join('');
 
-    let media;
+    let media = '';
     if (l.thumbnail) {
-      media = `<div class="card-media">
-        <img class="card-img" src="${l.thumbnail}" alt="${l.title}"
-          onerror="imgError(this,'${l.id}','${dom.replace(/'/g,'\\\'')}')" loading="lazy">
+      media = `<div class="card-img-wrap">
+        <img class="card-img" src="${l.thumbnail}" alt="${l.title}" loading="lazy"
+          onerror="onImgErr(this,'${l.id}','${h.replace(/'/g,"\\'")}')"> 
       </div>`;
     } else {
-      media = `<div class="card-media">
-        <div class="card-nothumb">
-          <div class="nothumb-bg" style="background:${g}"></div>
-          <div class="nothumb-noise"></div>
-          <span class="nothumb-glyph">${init}</span>
-          <span class="nothumb-domain">${dom}</span>
-        </div>
-      </div>`;
+      media = noThumb(l.id, h);
     }
-
-    const pills = l.tags.slice(0,3).map(t =>
-      `<span class="tag-pill">${t.replace('#','')}</span>`
-    ).join('');
 
     a.innerHTML = `${media}
       <div class="card-body">
         <div class="card-title">${l.title}</div>
-        <div class="card-desc">${l.description||''}</div>
-        <div class="card-footer">
-          <div class="card-tags">${pills}</div>
+        ${l.description ? `<div class="card-desc">${l.description}</div>` : ''}
+        <div class="card-meta">
+          <div class="card-pills">${pills}</div>
           <span class="card-arrow">↗</span>
         </div>
       </div>`;
-
     return a;
   }
 
-  document.getElementById('search').addEventListener('input', e => {
-    query = e.target.value;
-    render();
-  });
-
+  document.getElementById('search').addEventListener('input', e => { q = e.target.value; render(); });
   init();
 </script>
 </body>
