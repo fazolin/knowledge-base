@@ -22,6 +22,7 @@
     "title": "Figma Plugin for Claude",
     "url": "https://claude.ai/plugins/figma",
     "description": "Conecta arquivos Figma, tokens e componentes ao Claude Code para implementar interfaces com mais fidelidade visual.",
+    "thumbnail": "https://source.unsplash.com/800x450/?figma,design,interface",
     "tags": ["#claude-plugin", "#claude-code", "#figma", "#design", "#ui", "#professional"],
     "addedAt": "2026-04-22"
   },
@@ -30,6 +31,7 @@
     "title": "Frontend Design Plugin for Claude",
     "url": "https://claude.ai/plugins/frontend-design",
     "description": "Ajuda a gerar interfaces mais polidas e menos genéricas, com melhor direção visual, tipografia e composição.",
+    "thumbnail": "https://source.unsplash.com/800x450/?typography,layout,design",
     "tags": ["#claude-plugin", "#claude-code", "#frontend", "#design", "#ui", "#professional"],
     "addedAt": "2026-04-22"
   },
@@ -38,6 +40,7 @@
     "title": "Playwright Plugin for Claude",
     "url": "https://claude.ai/plugins/playwright",
     "description": "Executa fluxos E2E, screenshots, validações e QA funcional diretamente a partir do Claude Code.",
+    "thumbnail": "https://source.unsplash.com/800x450/?browser,testing,automation",
     "tags": ["#claude-plugin", "#claude-code", "#testing", "#automation", "#e2e", "#professional"],
     "addedAt": "2026-04-22"
   },
@@ -46,6 +49,7 @@
     "title": "Context7",
     "url": "https://context7.com",
     "description": "Injeta documentação atualizada e versionada de bibliotecas no contexto do agente.",
+    "thumbnail": "https://source.unsplash.com/800x450/?library,books,documentation",
     "tags": ["#claude-plugin", "#claude-code", "#documentation", "#developer-tools", "#professional"],
     "addedAt": "2026-04-22"
   },
@@ -54,6 +58,7 @@
     "title": "GitHub Plugin for Claude",
     "url": "https://claude.ai/plugins/github",
     "description": "Permite revisar PRs, abrir issues, consultar Actions e trabalhar com o ciclo completo de entrega diretamente no Claude Code.",
+    "thumbnail": "https://source.unsplash.com/800x450/?code,collaboration,software",
     "tags": ["#claude-plugin", "#claude-code", "#github", "#devops", "#professional"],
     "addedAt": "2026-04-22"
   },
@@ -62,6 +67,7 @@
     "title": "Superpowers Plugin for Claude",
     "url": "https://claude.ai/plugins/superpowers",
     "description": "Pacote de skills para brainstorming, planejamento, TDD, revisão e execução mais disciplinada.",
+    "thumbnail": "https://source.unsplash.com/800x450/?productivity,workspace,planning",
     "tags": ["#claude-plugin", "#claude-code", "#workflow", "#productivity", "#professional"],
     "addedAt": "2026-04-22"
   },
@@ -97,6 +103,7 @@
     "title": "Serena Plugin for Claude",
     "url": "https://claude.ai/plugins/serena",
     "description": "Faz navegação e edição semântica em bases de código grandes, melhorando refatorações e entendimento estrutural.",
+    "thumbnail": "https://source.unsplash.com/800x450/?code,programming,software",
     "tags": ["#claude-plugin", "#claude-code", "#refactoring", "#developer-tools", "#professional"],
     "addedAt": "2026-04-22"
   },
