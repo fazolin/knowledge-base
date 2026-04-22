@@ -1,14 +1,23 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with this repository.
 
 ## Purpose
 
-Personal knowledge base for storing and organizing links and references — both professional and personal. Links are categorized with hashtags and stored in a structured JSON file. The future goal is to render these links visually in an `index.html` page organized by category.
+Personal knowledge base for storing and organizing links and references — both professional and personal. Links are categorized with hashtags and stored in `links.json`. The `index.html` renders them visually with filtering, search and timeline grouped by year/month.
 
-## Data Structure
+## Adding a Link
 
-All links live in `links.json` at the root. Each entry follows this shape:
+When the user pastes a URL (or batch of URLs):
+
+1. **Research** — Search or fetch the page to infer title, description and tags. Never ask if the user wants to add it — if they sent it, they want it added.
+2. **Append** to `links.json` following the schema below.
+3. **Commit** with message: `add: <title>`.
+4. **Push** to `main`.
+
+## JSON Schema
+
+All links live in `links.json` at the root:
 
 ```json
 {
@@ -17,25 +26,48 @@ All links live in `links.json` at the root. Each entry follows this shape:
   "url": "https://...",
   "description": "Breve descrição em português.",
   "thumbnail": "https://...",
-  "tags": ["#professional", "#design", "#reference"],
-  "addedAt": "2026-04-22"
+  "tags": ["#tag1", "#tag2"],
+  "addedAt": "YYYY-MM-DD"
 }
 ```
 
-For `thumbnail`:
-- GitHub repos: use `https://github.com/<owner>.png`
-- Instagram: user must provide a screenshot; store a local path or skip the field
-- Other sites: try fetching the `og:image` meta tag from the page
+### Field rules
 
-Tags use the `#hashtag` convention. Categories are derived from tags — no separate category field.
+| Field | Rule |
+|---|---|
+| `id` | kebab-case slug, unique, derived from title or repo name |
+| `title` | Original name of the tool/project/resource |
+| `description` | 1–2 sentences in **Portuguese**, what it is and why it matters |
+| `thumbnail` | See thumbnail rules below — optional field |
+| `tags` | Array of `#hashtag` strings. Use existing tags when possible |
+| `addedAt` | Today's date in `YYYY-MM-DD` format |
 
-## Adding Links
+### Thumbnail rules
 
-When the user pastes a link or a batch of links, Claude should:
-1. Infer `title`, `description`, and `tags` from context (URL structure, user notes, page content if fetchable).
-2. Append the new entry/entries to `links.json`.
-3. Commit with message: `add: <title>`.
+- **YouTube videos** → `https://img.youtube.com/vi/{VIDEO_ID}/hqdefault.jpg`
+- **Any other link** → omit the `thumbnail` field entirely; the UI generates a unique gradient per card automatically
+- Never use LoremFlickr, Unsplash source, or GitHub avatars — they are slow or return duplicates
 
-## Future: index.html
+### Tags convention
 
-A static `index.html` will render `links.json` grouped by tag, with filtering and search. It must be self-contained (no build step, no bundler) — plain HTML + vanilla JS + CSS.
+Tags use `#hashtag` format. Derive from content, not from the URL. Some common tags already in use:
+
+`#ai` `#open-source` `#self-hosted` `#tools` `#design` `#ux` `#ui` `#frontend` `#developer-tools` `#automation` `#workflow` `#claude-plugin` `#claude-code` `#touchdesigner` `#creative-coding` `#tutorial` `#reference` `#3d` `#motion-graphics` `#interactive`
+
+Add new tags freely when they make sense. No limit per entry.
+
+## Updating an Existing Link
+
+Edit the relevant entry in `links.json` directly, then commit with message: `update: <title>`.
+
+## Removing a Link
+
+Delete the entry from `links.json`, then commit with message: `remove: <title>`.
+
+## Instagram Links
+
+The environment cannot fetch Instagram pages. Ask the user to paste a description or screenshot so the entry can be created with accurate metadata.
+
+## Network Constraints
+
+External HTTP fetches are blocked in this environment. Use `WebSearch` to research URLs instead of `fetch`/`curl`.
