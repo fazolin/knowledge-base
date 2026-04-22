@@ -16,5 +16,106 @@
     "thumbnail": "https://design.google/static/img/share.png",
     "tags": ["#design", "#ux", "#ui", "#reference", "#google", "#professional"],
     "addedAt": "2026-04-22"
+  },
+  {
+    "id": "claude-plugin-figma",
+    "title": "Figma Plugin for Claude",
+    "url": "https://claude.ai/plugins/figma",
+    "description": "Conecta arquivos Figma, tokens e componentes ao Claude Code para implementar interfaces com mais fidelidade visual.",
+    "tags": ["#claude-plugin", "#claude-code", "#figma", "#design", "#ui", "#professional"],
+    "addedAt": "2026-04-22"
+  },
+  {
+    "id": "claude-plugin-frontend-design",
+    "title": "Frontend Design Plugin for Claude",
+    "url": "https://claude.ai/plugins/frontend-design",
+    "description": "Ajuda a gerar interfaces mais polidas e menos genéricas, com melhor direção visual, tipografia e composição.",
+    "tags": ["#claude-plugin", "#claude-code", "#frontend", "#design", "#ui", "#professional"],
+    "addedAt": "2026-04-22"
+  },
+  {
+    "id": "claude-plugin-playwright",
+    "title": "Playwright Plugin for Claude",
+    "url": "https://claude.ai/plugins/playwright",
+    "description": "Executa fluxos E2E, screenshots, validações e QA funcional diretamente a partir do Claude Code.",
+    "tags": ["#claude-plugin", "#claude-code", "#testing", "#automation", "#e2e", "#professional"],
+    "addedAt": "2026-04-22"
+  },
+  {
+    "id": "context7",
+    "title": "Context7",
+    "url": "https://context7.com",
+    "description": "Injeta documentação atualizada e versionada de bibliotecas no contexto do agente.",
+    "tags": ["#claude-plugin", "#claude-code", "#documentation", "#developer-tools", "#professional"],
+    "addedAt": "2026-04-22"
+  },
+  {
+    "id": "claude-plugin-github",
+    "title": "GitHub Plugin for Claude",
+    "url": "https://claude.ai/plugins/github",
+    "description": "Permite revisar PRs, abrir issues, consultar Actions e trabalhar com o ciclo completo de entrega diretamente no Claude Code.",
+    "tags": ["#claude-plugin", "#claude-code", "#github", "#devops", "#professional"],
+    "addedAt": "2026-04-22"
+  },
+  {
+    "id": "claude-plugin-superpowers",
+    "title": "Superpowers Plugin for Claude",
+    "url": "https://claude.ai/plugins/superpowers",
+    "description": "Pacote de skills para brainstorming, planejamento, TDD, revisão e execução mais disciplinada.",
+    "tags": ["#claude-plugin", "#claude-code", "#workflow", "#productivity", "#professional"],
+    "addedAt": "2026-04-22"
+  },
+  {
+    "id": "n8n",
+    "title": "n8n",
+    "url": "https://github.com/n8n-io/n8n",
+    "description": "Plataforma visual e extensível para automações, integrações, agentes e workflows com forte comunidade open-source.",
+    "thumbnail": "https://github.com/n8n-io.png",
+    "tags": ["#automation", "#workflow", "#open-source", "#self-hosted", "#no-code", "#professional"],
+    "addedAt": "2026-04-22"
+  },
+  {
+    "id": "postiz",
+    "title": "Postiz",
+    "url": "https://github.com/gitroomhq/postiz-app",
+    "description": "Plataforma open-source para agendamento social, analytics, colaboração e publicação multi-canal.",
+    "thumbnail": "https://github.com/gitroomhq.png",
+    "tags": ["#social-media", "#open-source", "#self-hosted", "#marketing", "#tools"],
+    "addedAt": "2026-04-22"
+  },
+  {
+    "id": "ghost-cms",
+    "title": "Ghost",
+    "url": "https://github.com/TryGhost/Ghost",
+    "description": "Stack editorial moderna para blog, newsletter, memberships e distribuição de conteúdo.",
+    "thumbnail": "https://github.com/TryGhost.png",
+    "tags": ["#cms", "#blog", "#newsletter", "#open-source", "#self-hosted", "#content"],
+    "addedAt": "2026-04-22"
+  },
+  {
+    "id": "claude-plugin-serena",
+    "title": "Serena Plugin for Claude",
+    "url": "https://claude.ai/plugins/serena",
+    "description": "Faz navegação e edição semântica em bases de código grandes, melhorando refatorações e entendimento estrutural.",
+    "tags": ["#claude-plugin", "#claude-code", "#refactoring", "#developer-tools", "#professional"],
+    "addedAt": "2026-04-22"
+  },
+  {
+    "id": "firecrawl",
+    "title": "Firecrawl",
+    "url": "https://github.com/mendableai/firecrawl",
+    "description": "Faz busca, scraping e interação com a web em formato pronto para agentes de IA.",
+    "thumbnail": "https://github.com/mendableai.png",
+    "tags": ["#scraping", "#crawling", "#ai", "#open-source", "#developer-tools", "#professional"],
+    "addedAt": "2026-04-22"
+  },
+  {
+    "id": "kestra",
+    "title": "Kestra",
+    "url": "https://github.com/kestra-io/kestra",
+    "description": "Orquestrador declarativo para pipelines, jobs, ETL leve e fluxos criativos com estado.",
+    "thumbnail": "https://github.com/kestra-io.png",
+    "tags": ["#orchestration", "#workflow", "#etl", "#open-source", "#self-hosted", "#professional"],
+    "addedAt": "2026-04-22"
   }
 ]
