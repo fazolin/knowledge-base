@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Base</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f4f3ef;
+      --surface: #ffffff;
+      --border: #e4e2db;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --accent: #1a1a1a;
+      --tag-bg: #ebebeb;
+      --tab-active-bg: #1a1a1a;
+      --tab-active-text: #ffffff;
+      --radius: 12px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 40px 24px 0;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      color: var(--muted);
+      margin-top: 6px;
+      font-size: 14px;
+    }
+
+    .search-wrap {
+      margin-top: 20px;
+    }
+
+    #search {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 14px;
+      background: var(--surface);
+      outline: none;
+      color: var(--text);
+      transition: border-color 0.15s;
+    }
+
+    #search:focus { border-color: #999; }
+
+    nav {
+      max-width: 1200px;
+      margin: 24px auto 0;
+      padding: 0 24px;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 4px;
+    }
+
+    nav::-webkit-scrollbar { display: none; }
+
+    .tab {
+      flex-shrink: 0;
+      padding: 7px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .tab:hover { border-color: #aaa; color: var(--text); }
+
+    .tab.active {
+      background: var(--tab-active-bg);
+      color: var(--tab-active-text);
+      border-color: var(--tab-active-bg);
+    }
+
+    .tab .count {
+      display: inline-block;
+      margin-left: 5px;
+      opacity: 0.55;
+      font-size: 11px;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 24px 60px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .card-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      background: var(--bg);
+      display: block;
+    }
+
+    .card-thumb-fallback {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, #e8e6df 0%, #d4d1c8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      font-weight: 700;
+      color: #b0ad9e;
+      letter-spacing: -1px;
+    }
+
+    .card-body {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--text);
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.55;
+      flex: 1;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .tag-pill {
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 20px;
+      background: var(--tag-bg);
+      color: var(--muted);
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.1s;
+    }
+
+    .tag-pill:hover { background: #ddd; }
+
+    .card-footer {
+      padding: 0 16px 16px;
+    }
+
+    .btn-link {
+      display: block;
+      text-align: center;
+      padding: 9px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: opacity 0.15s;
+    }
+
+    .btn-link:hover { opacity: 0.8; }
+
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 22px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Knowledge Base</h1>
+  <p>Links, referências e recursos organizados por categoria.</p>
+  <div class="search-wrap">
+    <input type="text" id="search" placeholder="Buscar...">
+  </div>
+</header>
+
+<nav id="tabs"></nav>
+
+<main>
+  <div class="grid" id="grid"></div>
+</main>
+
+<script>
+  let allLinks = [];
+  let activeTag = 'all';
+  let searchQuery = '';
+
+  async function init() {
+    const res = await fetch('links.json');
+    allLinks = await res.json();
+    buildTabs();
+    render();
+  }
+
+  function buildTabs() {
+    const counts = {};
+    allLinks.forEach(link => {
+      link.tags.forEach(tag => {
+        counts[tag] = (counts[tag] || 0) + 1;
+      });
+    });
+
+    const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+
+    const nav = document.getElementById('tabs');
+    nav.innerHTML = '';
+
+    const allTab = makeTab('all', 'Tudo', allLinks.length);
+    nav.appendChild(allTab);
+
+    sorted.forEach(([tag, count]) => {
+      nav.appendChild(makeTab(tag, tag.replace('#', ''), count));
+    });
+  }
+
+  function makeTab(value, label, count) {
+    const btn = document.createElement('button');
+    btn.className = 'tab' + (value === activeTag ? ' active' : '');
+    btn.innerHTML = `${label}<span class="count">${count}</span>`;
+    btn.addEventListener('click', () => {
+      activeTag = value;
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      render();
+    });
+    return btn;
+  }
+
+  function render() {
+    const grid = document.getElementById('grid');
+    const q = searchQuery.toLowerCase();
+
+    const filtered = allLinks.filter(link => {
+      const matchesTag = activeTag === 'all' || link.tags.includes(activeTag);
+      const matchesSearch = !q
+        || link.title.toLowerCase().includes(q)
+        || (link.description || '').toLowerCase().includes(q)
+        || link.tags.some(t => t.toLowerCase().includes(q));
+      return matchesTag && matchesSearch;
+    });
+
+    if (filtered.length === 0) {
+      grid.innerHTML = '<div class="empty">Nenhum resultado encontrado.</div>';
+      return;
+    }
+
+    grid.innerHTML = '';
+    filtered.forEach(link => grid.appendChild(makeCard(link)));
+  }
+
+  function makeCard(link) {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    let thumbHtml;
+    if (link.thumbnail) {
+      thumbHtml = `<img class="card-thumb" src="${link.thumbnail}" alt="${link.title}"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-thumb-fallback" style="display:none">${link.title[0]}</div>`;
+    } else {
+      thumbHtml = `<div class="card-thumb-fallback">${link.title[0]}</div>`;
+    }
+
+    const tagsHtml = link.tags.map(tag =>
+      `<span class="tag-pill" data-tag="${tag}">${tag.replace('#', '')}</span>`
+    ).join('');
+
+    card.innerHTML = `
+      ${thumbHtml}
+      <div class="card-body">
+        <div class="card-title">${link.title}</div>
+        <div class="card-desc">${link.description || ''}</div>
+        <div class="card-tags">${tagsHtml}</div>
+      </div>
+      <div class="card-footer">
+        <a class="btn-link" href="${link.url}" target="_blank" rel="noopener">Abrir →</a>
+      </div>
+    `;
+
+    card.querySelectorAll('.tag-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        const tag = pill.dataset.tag;
+        activeTag = tag;
+        document.querySelectorAll('.tab').forEach(t => {
+          t.classList.toggle('active', t.textContent.startsWith(tag.replace('#', '')));
+        });
+        render();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    return card;
+  }
+
+  document.getElementById('search').addEventListener('input', e => {
+    searchQuery = e.target.value;
+    render();
+  });
+
+  init();
+</script>
+</body>
+</html>
