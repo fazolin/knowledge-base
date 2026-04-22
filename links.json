@@ -178,5 +178,14 @@
     "thumbnail": "https://picsum.photos/seed/streamdiffusion-td/400/225",
     "tags": ["#touchdesigner", "#ai", "#generative-ai", "#real-time", "#creative-coding", "#interactive", "#tools"],
     "addedAt": "2026-04-22T11:35:00"
+  },
+  {
+    "id": "ai-render-engine-comfyui",
+    "title": "We Built an AI Render Engine for FREE",
+    "url": "https://www.youtube.com/watch?v=0WkixvqnPXw",
+    "description": "Tutorial completo para transformar cenas 3D em vídeos com renderização de IA usando ferramentas gratuitas e open-source. Cobre o pipeline inteiro com Blender, ComfyUI, SkyReels V3 e Wan VACE — desde passes de profundidade até geração de texturas, iluminação e efeitos visuais realistas.",
+    "thumbnail": "https://img.youtube.com/vi/0WkixvqnPXw/hqdefault.jpg",
+    "tags": ["#tutorial", "#3d", "#ai", "#open-source", "#creative-coding", "#motion-graphics", "#blender", "#comfyui"],
+    "addedAt": "2026-04-22T15:30:00"
   }
 ]
