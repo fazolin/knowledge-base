@@ -180,6 +180,15 @@
     "addedAt": "2026-04-22T11:35:00"
   },
   {
+    "id": "mapcn",
+    "title": "mapcn",
+    "url": "https://github.com/AnmolSaini16/mapcn",
+    "description": "Biblioteca de componentes de mapas bonitos para web. Gratuito, sem configuração e com setup em um único comando — ideal para adicionar mapas interativos a qualquer projeto frontend.",
+    "thumbnail": "https://picsum.photos/seed/mapcn/400/225",
+    "tags": ["#frontend", "#open-source", "#tools", "#ui", "#maps", "#developer-tools"],
+    "addedAt": "2026-04-22T16:30:00"
+  },
+  {
     "id": "gsap-skills",
     "title": "GSAP Skills",
     "url": "https://github.com/greensock/gsap-skills",
