@@ -40,7 +40,7 @@ All links live in `links.json` at the root:
 | `description` | 1–2 sentences in **Portuguese**, what it is and why it matters |
 | `thumbnail` | See thumbnail rules below — optional field |
 | `tags` | Array of `#hashtag` strings. Use existing tags when possible |
-| `addedAt` | Today's date in `YYYY-MM-DD` format |
+| `addedAt` | Date and time of insertion in `YYYY-MM-DDTHH:MM:SS` format (e.g. `2026-04-22T15:30:00`). Always use the current date and time. |
 
 ### Thumbnail rules
 

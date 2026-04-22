@@ -58,7 +58,7 @@ function render() {
   /* group by year + month, descending */
   const groups = {};
   filtered.forEach(l => {
-    const d = new Date(l.addedAt + 'T12:00:00');
+    const d = new Date(l.addedAt.length === 10 ? l.addedAt + 'T12:00:00' : l.addedAt);
     const k = `${d.getFullYear()}-${String(d.getMonth()).padStart(2, '0')}`;
     if (!groups[k]) groups[k] = { year: d.getFullYear(), month: d.getMonth(), items: [] };
     groups[k].items.push(l);
@@ -67,6 +67,7 @@ function render() {
   main.innerHTML = '';
   Object.keys(groups).sort().reverse().forEach(k => {
     const { year, month, items } = groups[k];
+    items.sort((a, b) => new Date(b.addedAt) - new Date(a.addedAt));
     const sec = document.createElement('div');
     sec.className = 'month-group';
     sec.innerHTML = `
