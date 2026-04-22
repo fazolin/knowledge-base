@@ -180,6 +180,15 @@
     "addedAt": "2026-04-22T11:35:00"
   },
   {
+    "id": "stable-diffusion-webui-forge",
+    "title": "Stable Diffusion WebUI Forge",
+    "url": "https://github.com/lllyasviel/stable-diffusion-webui-forge",
+    "description": "Fork otimizado do WebUI da AUTOMATIC1111 com backend redesenhado para menor uso de VRAM e maior performance. Suporta Flux, SD3 e modelos modernos com mais eficiência do que o WebUI original.",
+    "thumbnail": "https://picsum.photos/seed/stable-diffusion-webui-forge/400/225",
+    "tags": ["#ai", "#generative-ai", "#open-source", "#self-hosted", "#tools", "#image-generation"],
+    "addedAt": "2026-04-22T16:20:00"
+  },
+  {
     "id": "pi-mono",
     "title": "pi-mono",
     "url": "https://github.com/badlogic/pi-mono",
