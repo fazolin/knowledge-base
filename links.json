@@ -7,5 +7,14 @@
     "thumbnail": "https://github.com/Anil-matcha.png",
     "tags": ["#ai", "#generative-ai", "#open-source", "#image-generation", "#video-generation", "#self-hosted", "#tools"],
     "addedAt": "2026-04-22"
+  },
+  {
+    "id": "google-design",
+    "title": "Google Design",
+    "url": "https://design.google/",
+    "description": "Portal oficial do Google sobre cultura e prática de design. Artigos, cases, pesquisas e recursos sobre UX, tipografia, Material Design e identidade visual.",
+    "thumbnail": "https://design.google/static/img/share.png",
+    "tags": ["#design", "#ux", "#ui", "#reference", "#google", "#professional"],
+    "addedAt": "2026-04-22"
   }
 ]
