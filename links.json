@@ -4,6 +4,7 @@
     "title": "Open Generative AI",
     "url": "https://github.com/Anil-matcha/Open-Generative-AI",
     "description": "Estúdio de IA open-source e self-hostable para geração de imagens, vídeos e animações. Acesso a 200+ modelos (Flux, Midjourney, Kling, Sora) sem filtros de conteúdo ou assinatura.",
+    "thumbnail": "https://picsum.photos/seed/open-generative-ai/400/225",
     "tags": ["#ai", "#generative-ai", "#open-source", "#image-generation", "#video-generation", "#self-hosted", "#tools"],
     "addedAt": "2026-04-22T10:00:00"
   },
@@ -12,6 +13,7 @@
     "title": "Google Design",
     "url": "https://design.google/",
     "description": "Portal oficial do Google sobre cultura e prática de design. Artigos, cases, pesquisas e recursos sobre UX, tipografia, Material Design e identidade visual.",
+    "thumbnail": "https://picsum.photos/seed/google-design/400/225",
     "tags": ["#design", "#ux", "#ui", "#reference", "#google", "#professional"],
     "addedAt": "2026-04-22T10:05:00"
   },
@@ -20,6 +22,7 @@
     "title": "Figma Plugin for Claude",
     "url": "https://claude.ai/plugins/figma",
     "description": "Conecta arquivos Figma, tokens e componentes ao Claude Code para implementar interfaces com mais fidelidade visual.",
+    "thumbnail": "https://picsum.photos/seed/claude-plugin-figma/400/225",
     "tags": ["#claude-plugin", "#claude-code", "#figma", "#design", "#ui", "#professional"],
     "addedAt": "2026-04-22T10:10:00"
   },
@@ -28,6 +31,7 @@
     "title": "Frontend Design Plugin for Claude",
     "url": "https://claude.ai/plugins/frontend-design",
     "description": "Ajuda a gerar interfaces mais polidas e menos genéricas, com melhor direção visual, tipografia e composição.",
+    "thumbnail": "https://picsum.photos/seed/claude-plugin-frontend-design/400/225",
     "tags": ["#claude-plugin", "#claude-code", "#frontend", "#design", "#ui", "#professional"],
     "addedAt": "2026-04-22T10:15:00"
   },
@@ -36,6 +40,7 @@
     "title": "Playwright Plugin for Claude",
     "url": "https://claude.ai/plugins/playwright",
     "description": "Executa fluxos E2E, screenshots, validações e QA funcional diretamente a partir do Claude Code.",
+    "thumbnail": "https://picsum.photos/seed/claude-plugin-playwright/400/225",
     "tags": ["#claude-plugin", "#claude-code", "#testing", "#automation", "#e2e", "#professional"],
     "addedAt": "2026-04-22T10:20:00"
   },
@@ -44,6 +49,7 @@
     "title": "Context7",
     "url": "https://context7.com",
     "description": "Injeta documentação atualizada e versionada de bibliotecas no contexto do agente.",
+    "thumbnail": "https://picsum.photos/seed/context7/400/225",
     "tags": ["#claude-plugin", "#claude-code", "#documentation", "#developer-tools", "#professional"],
     "addedAt": "2026-04-22T10:25:00"
   },
@@ -52,6 +58,7 @@
     "title": "GitHub Plugin for Claude",
     "url": "https://claude.ai/plugins/github",
     "description": "Permite revisar PRs, abrir issues, consultar Actions e trabalhar com o ciclo completo de entrega diretamente no Claude Code.",
+    "thumbnail": "https://picsum.photos/seed/claude-plugin-github/400/225",
     "tags": ["#claude-plugin", "#claude-code", "#github", "#devops", "#professional"],
     "addedAt": "2026-04-22T10:30:00"
   },
@@ -60,6 +67,7 @@
     "title": "Superpowers Plugin for Claude",
     "url": "https://claude.ai/plugins/superpowers",
     "description": "Pacote de skills para brainstorming, planejamento, TDD, revisão e execução mais disciplinada.",
+    "thumbnail": "https://picsum.photos/seed/claude-plugin-superpowers/400/225",
     "tags": ["#claude-plugin", "#claude-code", "#workflow", "#productivity", "#professional"],
     "addedAt": "2026-04-22T10:35:00"
   },
@@ -68,6 +76,7 @@
     "title": "n8n",
     "url": "https://github.com/n8n-io/n8n",
     "description": "Plataforma visual e extensível para automações, integrações, agentes e workflows com forte comunidade open-source.",
+    "thumbnail": "https://picsum.photos/seed/n8n/400/225",
     "tags": ["#automation", "#workflow", "#open-source", "#self-hosted", "#no-code", "#professional"],
     "addedAt": "2026-04-22T10:40:00"
   },
@@ -76,6 +85,7 @@
     "title": "Postiz",
     "url": "https://github.com/gitroomhq/postiz-app",
     "description": "Plataforma open-source para agendamento social, analytics, colaboração e publicação multi-canal.",
+    "thumbnail": "https://picsum.photos/seed/postiz/400/225",
     "tags": ["#social-media", "#open-source", "#self-hosted", "#marketing", "#tools"],
     "addedAt": "2026-04-22T10:45:00"
   },
@@ -84,6 +94,7 @@
     "title": "Ghost",
     "url": "https://github.com/TryGhost/Ghost",
     "description": "Stack editorial moderna para blog, newsletter, memberships e distribuição de conteúdo.",
+    "thumbnail": "https://picsum.photos/seed/ghost-cms/400/225",
     "tags": ["#cms", "#blog", "#newsletter", "#open-source", "#self-hosted", "#content"],
     "addedAt": "2026-04-22T10:50:00"
   },
@@ -92,6 +103,7 @@
     "title": "Serena Plugin for Claude",
     "url": "https://claude.ai/plugins/serena",
     "description": "Faz navegação e edição semântica em bases de código grandes, melhorando refatorações e entendimento estrutural.",
+    "thumbnail": "https://picsum.photos/seed/claude-plugin-serena/400/225",
     "tags": ["#claude-plugin", "#claude-code", "#refactoring", "#developer-tools", "#professional"],
     "addedAt": "2026-04-22T10:55:00"
   },
@@ -100,6 +112,7 @@
     "title": "Firecrawl",
     "url": "https://github.com/mendableai/firecrawl",
     "description": "Faz busca, scraping e interação com a web em formato pronto para agentes de IA.",
+    "thumbnail": "https://picsum.photos/seed/firecrawl/400/225",
     "tags": ["#scraping", "#crawling", "#ai", "#open-source", "#developer-tools", "#professional"],
     "addedAt": "2026-04-22T11:00:00"
   },
@@ -108,6 +121,7 @@
     "title": "Kestra",
     "url": "https://github.com/kestra-io/kestra",
     "description": "Orquestrador declarativo para pipelines, jobs, ETL leve e fluxos criativos com estado.",
+    "thumbnail": "https://picsum.photos/seed/kestra/400/225",
     "tags": ["#orchestration", "#workflow", "#etl", "#open-source", "#self-hosted", "#professional"],
     "addedAt": "2026-04-22T11:05:00"
   },
@@ -134,6 +148,7 @@
     "title": "LingBot-Map",
     "url": "https://github.com/Robbyant/lingbot-map",
     "description": "Modelo 3D feed-forward para reconstrução de cenas a partir de vídeo em streaming. Parte do ecossistema LingBot da Ant Group para embodied AI e robótica.",
+    "thumbnail": "https://picsum.photos/seed/lingbot-map/400/225",
     "tags": ["#ai", "#3d", "#robotics", "#open-source", "#foundation-model", "#spatial-ai"],
     "addedAt": "2026-04-22T11:20:00"
   },
@@ -142,6 +157,7 @@
     "title": "MediaPipe TouchDesigner Plugin",
     "url": "https://github.com/torinmb/mediapipe-touchdesigner",
     "description": "Plugin GPU-acelerado e self-contained para usar todos os modelos de visão do MediaPipe dentro do TouchDesigner. Roda sem instalação no Mac e PC, os modelos ML ficam dentro do sistema de arquivos virtual do TD e se comunicam via WebSocket local.",
+    "thumbnail": "https://picsum.photos/seed/mediapipe-touchdesigner/400/225",
     "tags": ["#touchdesigner", "#mediapipe", "#computer-vision", "#open-source", "#creative-coding", "#interactive", "#tools"],
     "addedAt": "2026-04-22T11:25:00"
   },
@@ -150,6 +166,7 @@
     "title": "StreamDiffusion",
     "url": "https://github.com/cumulo-autumn/streamdiffusion",
     "description": "Pipeline de difusão otimizado para geração de imagens interativa em tempo real. Usa processamento em batch, cache inteligente e aceleração GPU para rodar modelos de difusão com latência mínima — ideal para inputs ao vivo como webcam e screen capture.",
+    "thumbnail": "https://picsum.photos/seed/streamdiffusion/400/225",
     "tags": ["#ai", "#generative-ai", "#real-time", "#image-generation", "#open-source", "#creative-coding"],
     "addedAt": "2026-04-22T11:30:00"
   },
@@ -158,6 +175,7 @@
     "title": "StreamDiffusionTD",
     "url": "https://dotsimulate.com/docs/streamdiffusiontd",
     "description": "Operador TouchDesigner que conecta inputs em tempo real (câmera, áudio, sensores) ao StreamDiffusion. Suporta SDXL-Turbo, ControlNet, IP Adapter, TensorRT e video-to-video com consistência temporal.",
+    "thumbnail": "https://picsum.photos/seed/streamdiffusion-td/400/225",
     "tags": ["#touchdesigner", "#ai", "#generative-ai", "#real-time", "#creative-coding", "#interactive", "#tools"],
     "addedAt": "2026-04-22T11:35:00"
   }
