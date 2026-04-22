@@ -180,6 +180,15 @@
     "addedAt": "2026-04-22T11:35:00"
   },
   {
+    "id": "toolfolio",
+    "title": "Toolfolio",
+    "url": "https://toolfolio.io/",
+    "description": "Diretório curado de ferramentas para criadores digitais. Agrega centenas de tools organizadas por categoria — design, AI, marketing, no-code, dev e mais.",
+    "thumbnail": "https://picsum.photos/seed/toolfolio/400/225",
+    "tags": ["#tools", "#design", "#reference", "#workflow", "#ai", "#developer-tools"],
+    "addedAt": "2026-04-22T16:40:00"
+  },
+  {
     "id": "jitter-video",
     "title": "Jitter",
     "url": "https://jitter.video/",
