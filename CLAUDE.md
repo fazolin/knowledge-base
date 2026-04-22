@@ -25,9 +25,8 @@ All links live in `links.json` at the root:
   "title": "Human-readable title",
   "url": "https://...",
   "description": "Breve descrição em português.",
-  "thumbnail": "https://...",
   "tags": ["#tag1", "#tag2"],
-  "addedAt": "YYYY-MM-DD"
+  "addedAt": "2026-04-22T15:30:00"
 }
 ```
 
