@@ -3,366 +3,529 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Knowledge Base</title>
+  <title>Caio Fazolin · Knowledge Base</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #f4f3ef;
-      --surface: #ffffff;
-      --border: #e4e2db;
-      --text: #1a1a1a;
-      --muted: #6b6b6b;
-      --accent: #1a1a1a;
-      --tag-bg: #ebebeb;
-      --tab-active-bg: #1a1a1a;
-      --tab-active-text: #ffffff;
+      --bg: #0c0c0c;
+      --surface: #141414;
+      --border: #252525;
+      --border-hover: #3a3a3a;
+      --text: #e8e8e8;
+      --muted: #5a5a5a;
+      --muted-2: #333;
       --radius: 12px;
-      --shadow: 0 2px 8px rgba(0,0,0,0.07);
+      --gap: 14px;
     }
 
+    html { color-scheme: dark; }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }
 
-    header {
-      padding: 40px 24px 0;
-      max-width: 1200px;
+    /* ─── HEADER ─── */
+    .header {
+      max-width: 1280px;
       margin: 0 auto;
+      padding: 52px 28px 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
-    header h1 {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-    }
+    .brand { display: flex; flex-direction: column; gap: 3px; }
 
-    header p {
+    .brand-sub {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
       color: var(--muted);
-      margin-top: 6px;
-      font-size: 14px;
     }
 
-    .search-wrap {
-      margin-top: 20px;
+    .brand-title {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      line-height: 1;
+      color: var(--text);
     }
 
     #search {
-      width: 100%;
-      max-width: 400px;
-      padding: 10px 16px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 14px;
       background: var(--surface);
-      outline: none;
+      border: 1px solid var(--border);
+      border-radius: 9px;
       color: var(--text);
-      transition: border-color 0.15s;
+      font-size: 13px;
+      outline: none;
+      padding: 9px 15px;
+      width: 220px;
+      transition: border-color 0.15s, width 0.2s ease;
+      align-self: flex-end;
     }
 
-    #search:focus { border-color: #999; }
+    #search::placeholder { color: var(--muted); }
+    #search:focus { border-color: var(--border-hover); width: 260px; }
 
-    nav {
-      max-width: 1200px;
+    /* ─── TABS ─── */
+    .tabs-track {
+      max-width: 1280px;
       margin: 24px auto 0;
-      padding: 0 24px;
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      padding-bottom: 4px;
     }
 
-    nav::-webkit-scrollbar { display: none; }
+    .tabs-scroll {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      padding: 0 28px 10px;
+      scrollbar-width: none;
+    }
+
+    .tabs-scroll::-webkit-scrollbar { display: none; }
 
     .tab {
       flex-shrink: 0;
-      padding: 7px 16px;
-      border-radius: 20px;
+      padding: 5px 13px;
+      border-radius: 7px;
       border: 1px solid var(--border);
-      background: var(--surface);
+      background: transparent;
       color: var(--muted);
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 500;
       cursor: pointer;
-      transition: all 0.15s;
+      transition: color 0.12s, border-color 0.12s, background 0.12s;
       white-space: nowrap;
-      user-select: none;
     }
 
-    .tab:hover { border-color: #aaa; color: var(--text); }
+    .tab:hover { color: var(--text); border-color: var(--border-hover); }
 
     .tab.active {
-      background: var(--tab-active-bg);
-      color: var(--tab-active-text);
-      border-color: var(--tab-active-bg);
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
     }
 
-    .tab .count {
-      display: inline-block;
+    .tab-count {
       margin-left: 5px;
-      opacity: 0.55;
-      font-size: 11px;
+      font-size: 10px;
+      opacity: 0.45;
     }
 
+    /* ─── MAIN ─── */
     main {
-      max-width: 1200px;
+      max-width: 1280px;
       margin: 0 auto;
-      padding: 28px 24px 60px;
+      padding: 28px 28px 80px;
     }
 
+    /* ─── MONTH GROUP ─── */
+    .month-group { margin-bottom: 44px; }
+
+    .month-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .month-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .month-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .month-count {
+      font-size: 10px;
+      color: var(--muted-2);
+      white-space: nowrap;
+    }
+
+    /* ─── GRID ─── */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--gap);
     }
 
+    /* ─── CARD ─── */
     .card {
       background: var(--surface);
       border-radius: var(--radius);
       border: 1px solid var(--border);
-      box-shadow: var(--shadow);
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: transform 0.15s, box-shadow 0.15s;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, transform 0.15s;
+      position: relative;
     }
 
     .card:hover {
+      border-color: var(--border-hover);
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
 
-    .card-thumb {
+    /* ─── MEDIA ─── */
+    .card-media {
       width: 100%;
-      aspect-ratio: 16/9;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      background: var(--bg);
       display: block;
     }
 
-    .card-thumb-fallback {
+    /* No-thumb creative treatment */
+    .card-nothumb {
       width: 100%;
-      aspect-ratio: 16/9;
-      background: linear-gradient(135deg, #e8e6df 0%, #d4d1c8 100%);
+      height: 100%;
+      position: relative;
+      overflow: hidden;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 40px;
-      font-weight: 700;
-      color: #b0ad9e;
-      letter-spacing: -1px;
+      align-items: flex-end;
+      padding: 12px;
     }
 
+    .nothumb-bg {
+      position: absolute;
+      inset: 0;
+    }
+
+    /* Noise overlay */
+    .nothumb-noise {
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px;
+    }
+
+    .nothumb-glyph {
+      position: absolute;
+      top: -10px;
+      right: -6px;
+      font-size: 96px;
+      font-weight: 900;
+      line-height: 1;
+      color: rgba(255,255,255,0.06);
+      pointer-events: none;
+      user-select: none;
+      letter-spacing: -4px;
+    }
+
+    .nothumb-domain {
+      position: relative;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      color: rgba(255,255,255,0.35);
+      text-transform: lowercase;
+    }
+
+    /* ─── CARD BODY ─── */
     .card-body {
-      padding: 16px;
+      padding: 13px 14px 14px;
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 7px;
     }
 
     .card-title {
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 600;
-      line-height: 1.35;
+      line-height: 1.4;
       color: var(--text);
     }
 
     .card-desc {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--muted);
-      line-height: 1.55;
+      line-height: 1.6;
       flex: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      margin-top: 2px;
     }
 
     .card-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 5px;
+      gap: 4px;
+      flex: 1;
+      min-width: 0;
     }
 
     .tag-pill {
-      font-size: 11px;
-      padding: 3px 9px;
-      border-radius: 20px;
-      background: var(--tag-bg);
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.05);
       color: var(--muted);
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.1s;
+      border: 1px solid var(--border);
+      white-space: nowrap;
     }
 
-    .tag-pill:hover { background: #ddd; }
-
-    .card-footer {
-      padding: 0 16px 16px;
-    }
-
-    .btn-link {
-      display: block;
-      text-align: center;
-      padding: 9px;
-      border-radius: 8px;
-      background: var(--accent);
-      color: #fff;
-      text-decoration: none;
+    .card-arrow {
       font-size: 13px;
-      font-weight: 500;
+      color: var(--muted-2);
+      flex-shrink: 0;
+      opacity: 0;
       transition: opacity 0.15s;
     }
 
-    .btn-link:hover { opacity: 0.8; }
+    .card:hover .card-arrow { opacity: 1; }
 
+    /* ─── EMPTY ─── */
     .empty {
       grid-column: 1 / -1;
+      padding: 80px 0;
       text-align: center;
-      padding: 60px 0;
       color: var(--muted);
-      font-size: 15px;
+      font-size: 14px;
     }
 
-    @media (max-width: 600px) {
-      header h1 { font-size: 22px; }
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1100px) {
+      .grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .header { padding: 36px 20px 0; }
+      .tabs-scroll { padding: 0 20px 10px; }
+      main { padding: 24px 20px 60px; }
+      .brand-title { font-size: 24px; }
+      #search { width: 160px; }
+      #search:focus { width: 190px; }
+    }
+
+    @media (max-width: 480px) {
+      .grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .header { padding: 28px 16px 0; flex-direction: column; align-items: flex-start; }
+      .tabs-scroll { padding: 0 16px 10px; }
+      main { padding: 20px 16px 60px; }
+      .brand-title { font-size: 22px; }
+      #search { width: 100%; }
+      #search:focus { width: 100%; }
+      .card-desc { -webkit-line-clamp: 2; }
+    }
+
+    @media (max-width: 360px) {
       .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Knowledge Base</h1>
-  <p>Links, referências e recursos organizados por categoria.</p>
-  <div class="search-wrap">
-    <input type="text" id="search" placeholder="Buscar...">
+<div class="header">
+  <div class="brand">
+    <span class="brand-sub">Caio Fazolin</span>
+    <h1 class="brand-title">Knowledge Base</h1>
   </div>
-</header>
+  <input type="text" id="search" placeholder="Buscar...">
+</div>
 
-<nav id="tabs"></nav>
+<div class="tabs-track">
+  <div class="tabs-scroll" id="tabs"></div>
+</div>
 
-<main>
-  <div class="grid" id="grid"></div>
-</main>
+<main id="main"></main>
 
 <script>
+  const MONTHS = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+
   let allLinks = [];
   let activeTag = 'all';
-  let searchQuery = '';
-
-  const DATA = [{"id":"open-generative-ai","title":"Open Generative AI","url":"https://github.com/Anil-matcha/Open-Generative-AI","description":"Estúdio de IA open-source e self-hostable para geração de imagens, vídeos e animações. Acesso a 200+ modelos (Flux, Midjourney, Kling, Sora) sem filtros de conteúdo ou assinatura.","thumbnail":"https://github.com/Anil-matcha.png","tags":["#ai","#generative-ai","#open-source","#image-generation","#video-generation","#self-hosted","#tools"],"addedAt":"2026-04-22"},{"id":"google-design","title":"Google Design","url":"https://design.google/","description":"Portal oficial do Google sobre cultura e prática de design. Artigos, cases, pesquisas e recursos sobre UX, tipografia, Material Design e identidade visual.","thumbnail":"https://design.google/static/img/share.png","tags":["#design","#ux","#ui","#reference","#google","#professional"],"addedAt":"2026-04-22"},{"id":"claude-plugin-figma","title":"Figma Plugin for Claude","url":"https://claude.ai/plugins/figma","description":"Conecta arquivos Figma, tokens e componentes ao Claude Code para implementar interfaces com mais fidelidade visual.","tags":["#claude-plugin","#claude-code","#figma","#design","#ui","#professional"],"addedAt":"2026-04-22"},{"id":"claude-plugin-frontend-design","title":"Frontend Design Plugin for Claude","url":"https://claude.ai/plugins/frontend-design","description":"Ajuda a gerar interfaces mais polidas e menos genéricas, com melhor direção visual, tipografia e composição.","tags":["#claude-plugin","#claude-code","#frontend","#design","#ui","#professional"],"addedAt":"2026-04-22"},{"id":"claude-plugin-playwright","title":"Playwright Plugin for Claude","url":"https://claude.ai/plugins/playwright","description":"Executa fluxos E2E, screenshots, validações e QA funcional diretamente a partir do Claude Code.","tags":["#claude-plugin","#claude-code","#testing","#automation","#e2e","#professional"],"addedAt":"2026-04-22"},{"id":"context7","title":"Context7","url":"https://context7.com","description":"Injeta documentação atualizada e versionada de bibliotecas no contexto do agente.","tags":["#claude-plugin","#claude-code","#documentation","#developer-tools","#professional"],"addedAt":"2026-04-22"},{"id":"claude-plugin-github","title":"GitHub Plugin for Claude","url":"https://claude.ai/plugins/github","description":"Permite revisar PRs, abrir issues, consultar Actions e trabalhar com o ciclo completo de entrega diretamente no Claude Code.","tags":["#claude-plugin","#claude-code","#github","#devops","#professional"],"addedAt":"2026-04-22"},{"id":"claude-plugin-superpowers","title":"Superpowers Plugin for Claude","url":"https://claude.ai/plugins/superpowers","description":"Pacote de skills para brainstorming, planejamento, TDD, revisão e execução mais disciplinada.","tags":["#claude-plugin","#claude-code","#workflow","#productivity","#professional"],"addedAt":"2026-04-22"},{"id":"n8n","title":"n8n","url":"https://github.com/n8n-io/n8n","description":"Plataforma visual e extensível para automações, integrações, agentes e workflows com forte comunidade open-source.","thumbnail":"https://github.com/n8n-io.png","tags":["#automation","#workflow","#open-source","#self-hosted","#no-code","#professional"],"addedAt":"2026-04-22"},{"id":"postiz","title":"Postiz","url":"https://github.com/gitroomhq/postiz-app","description":"Plataforma open-source para agendamento social, analytics, colaboração e publicação multi-canal.","thumbnail":"https://github.com/gitroomhq.png","tags":["#social-media","#open-source","#self-hosted","#marketing","#tools"],"addedAt":"2026-04-22"},{"id":"ghost-cms","title":"Ghost","url":"https://github.com/TryGhost/Ghost","description":"Stack editorial moderna para blog, newsletter, memberships e distribuição de conteúdo.","thumbnail":"https://github.com/TryGhost.png","tags":["#cms","#blog","#newsletter","#open-source","#self-hosted","#content"],"addedAt":"2026-04-22"},{"id":"claude-plugin-serena","title":"Serena Plugin for Claude","url":"https://claude.ai/plugins/serena","description":"Faz navegação e edição semântica em bases de código grandes, melhorando refatorações e entendimento estrutural.","tags":["#claude-plugin","#claude-code","#refactoring","#developer-tools","#professional"],"addedAt":"2026-04-22"},{"id":"firecrawl","title":"Firecrawl","url":"https://github.com/mendableai/firecrawl","description":"Faz busca, scraping e interação com a web em formato pronto para agentes de IA.","thumbnail":"https://github.com/mendableai.png","tags":["#scraping","#crawling","#ai","#open-source","#developer-tools","#professional"],"addedAt":"2026-04-22"},{"id":"kestra","title":"Kestra","url":"https://github.com/kestra-io/kestra","description":"Orquestrador declarativo para pipelines, jobs, ETL leve e fluxos criativos com estado.","thumbnail":"https://github.com/kestra-io.png","tags":["#orchestration","#workflow","#etl","#open-source","#self-hosted","#professional"],"addedAt":"2026-04-22"}];
+  let query = '';
 
   async function init() {
-    allLinks = DATA;
+    const res = await fetch('links.json');
+    allLinks = await res.json();
     buildTabs();
     render();
   }
 
+  /* tabs */
   function buildTabs() {
     const counts = {};
-    allLinks.forEach(link => {
-      link.tags.forEach(tag => {
-        counts[tag] = (counts[tag] || 0) + 1;
-      });
-    });
-
-    const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
-
+    allLinks.forEach(l => l.tags.forEach(t => { counts[t] = (counts[t]||0)+1; }));
+    const sorted = Object.entries(counts).sort((a,b) => b[1]-a[1]);
     const nav = document.getElementById('tabs');
     nav.innerHTML = '';
-
-    const allTab = makeTab('all', 'Tudo', allLinks.length);
-    nav.appendChild(allTab);
-
-    sorted.forEach(([tag, count]) => {
-      nav.appendChild(makeTab(tag, tag.replace('#', ''), count));
-    });
+    nav.appendChild(tab('all','Tudo',allLinks.length));
+    sorted.forEach(([t,n]) => nav.appendChild(tab(t, t.replace('#',''), n)));
   }
 
-  function makeTab(value, label, count) {
+  function tab(value, label, count) {
     const btn = document.createElement('button');
     btn.className = 'tab' + (value === activeTag ? ' active' : '');
-    btn.innerHTML = `${label}<span class="count">${count}</span>`;
-    btn.addEventListener('click', () => {
+    btn.innerHTML = `${label}<span class="tab-count">${count}</span>`;
+    btn.onclick = () => {
       activeTag = value;
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
       btn.classList.add('active');
       render();
-    });
+    };
     return btn;
   }
 
+  /* render */
   function render() {
-    const grid = document.getElementById('grid');
-    const q = searchQuery.toLowerCase();
-
-    const filtered = allLinks.filter(link => {
-      const matchesTag = activeTag === 'all' || link.tags.includes(activeTag);
-      const matchesSearch = !q
-        || link.title.toLowerCase().includes(q)
-        || (link.description || '').toLowerCase().includes(q)
-        || link.tags.some(t => t.toLowerCase().includes(q));
-      return matchesTag && matchesSearch;
+    const q = query.toLowerCase();
+    const filtered = allLinks.filter(l => {
+      const matchTag = activeTag === 'all' || l.tags.includes(activeTag);
+      const matchQ = !q
+        || l.title.toLowerCase().includes(q)
+        || (l.description||'').toLowerCase().includes(q)
+        || l.tags.some(t => t.toLowerCase().includes(q));
+      return matchTag && matchQ;
     });
 
-    if (filtered.length === 0) {
-      grid.innerHTML = '<div class="empty">Nenhum resultado encontrado.</div>';
+    const main = document.getElementById('main');
+
+    if (!filtered.length) {
+      main.innerHTML = '<div class="empty">Nenhum resultado encontrado.</div>';
       return;
     }
 
-    grid.innerHTML = '';
-    filtered.forEach(link => grid.appendChild(makeCard(link)));
-  }
-
-  function makeCard(link) {
-    const card = document.createElement('div');
-    card.className = 'card';
-
-    let thumbHtml;
-    if (link.thumbnail) {
-      thumbHtml = `<img class="card-thumb" src="${link.thumbnail}" alt="${link.title}"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="card-thumb-fallback" style="display:none">${link.title[0]}</div>`;
-    } else {
-      thumbHtml = `<div class="card-thumb-fallback">${link.title[0]}</div>`;
-    }
-
-    const tagsHtml = link.tags.map(tag =>
-      `<span class="tag-pill" data-tag="${tag}">${tag.replace('#', '')}</span>`
-    ).join('');
-
-    card.innerHTML = `
-      ${thumbHtml}
-      <div class="card-body">
-        <div class="card-title">${link.title}</div>
-        <div class="card-desc">${link.description || ''}</div>
-        <div class="card-tags">${tagsHtml}</div>
-      </div>
-      <div class="card-footer">
-        <a class="btn-link" href="${link.url}" target="_blank" rel="noopener">Abrir →</a>
-      </div>
-    `;
-
-    card.querySelectorAll('.tag-pill').forEach(pill => {
-      pill.addEventListener('click', () => {
-        const tag = pill.dataset.tag;
-        activeTag = tag;
-        document.querySelectorAll('.tab').forEach(t => {
-          t.classList.toggle('active', t.textContent.startsWith(tag.replace('#', '')));
-        });
-        render();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
+    /* group by year+month descending */
+    const groups = {};
+    filtered.forEach(l => {
+      const d = new Date(l.addedAt + 'T12:00:00');
+      const key = `${d.getFullYear()}-${String(d.getMonth()).padStart(2,'0')}`;
+      if (!groups[key]) groups[key] = { year: d.getFullYear(), month: d.getMonth(), items: [] };
+      groups[key].items.push(l);
     });
 
-    return card;
+    main.innerHTML = '';
+    Object.keys(groups).sort().reverse().forEach(key => {
+      const { year, month, items } = groups[key];
+
+      const sec = document.createElement('div');
+      sec.className = 'month-group';
+      sec.innerHTML = `
+        <div class="month-header">
+          <span class="month-label">${MONTHS[month]} ${year}</span>
+          <div class="month-line"></div>
+          <span class="month-count">${items.length} ${items.length === 1 ? 'item' : 'itens'}</span>
+        </div>
+        <div class="grid"></div>
+      `;
+      const grid = sec.querySelector('.grid');
+      items.forEach(l => grid.appendChild(card(l)));
+      main.appendChild(sec);
+    });
+  }
+
+  /* gradient per card */
+  function gradient(id) {
+    let h = 0;
+    for (let i = 0; i < id.length; i++) h = (id.charCodeAt(i) + ((h<<5)-h))|0;
+    const hue = ((h>>>0) % 280) + 30;
+    const hue2 = (hue + 55) % 360;
+    return `linear-gradient(135deg, hsl(${hue},48%,20%) 0%, hsl(${hue2},38%,11%) 100%)`;
+  }
+
+  function domain(url) {
+    try { return new URL(url).hostname.replace('www.',''); }
+    catch { return ''; }
+  }
+
+  window.imgError = function(img, id, dom) {
+    const g = gradient(id);
+    const init = dom ? dom[0].toUpperCase() : '?';
+    img.parentElement.innerHTML = `
+      <div class="card-nothumb">
+        <div class="nothumb-bg" style="background:${g}"></div>
+        <div class="nothumb-noise"></div>
+        <span class="nothumb-glyph">${init}</span>
+        <span class="nothumb-domain">${dom}</span>
+      </div>`;
+  };
+
+  function card(l) {
+    const a = document.createElement('a');
+    a.className = 'card';
+    a.href = l.url;
+    a.target = '_blank';
+    a.rel = 'noopener';
+
+    const dom = domain(l.url);
+    const g = gradient(l.id);
+    const init = l.title[0].toUpperCase();
+
+    let media;
+    if (l.thumbnail) {
+      media = `<div class="card-media">
+        <img class="card-img" src="${l.thumbnail}" alt="${l.title}"
+          onerror="imgError(this,'${l.id}','${dom.replace(/'/g,'\\\'')}')" loading="lazy">
+      </div>`;
+    } else {
+      media = `<div class="card-media">
+        <div class="card-nothumb">
+          <div class="nothumb-bg" style="background:${g}"></div>
+          <div class="nothumb-noise"></div>
+          <span class="nothumb-glyph">${init}</span>
+          <span class="nothumb-domain">${dom}</span>
+        </div>
+      </div>`;
+    }
+
+    const pills = l.tags.slice(0,3).map(t =>
+      `<span class="tag-pill">${t.replace('#','')}</span>`
+    ).join('');
+
+    a.innerHTML = `${media}
+      <div class="card-body">
+        <div class="card-title">${l.title}</div>
+        <div class="card-desc">${l.description||''}</div>
+        <div class="card-footer">
+          <div class="card-tags">${pills}</div>
+          <span class="card-arrow">↗</span>
+        </div>
+      </div>`;
+
+    return a;
   }
 
   document.getElementById('search').addEventListener('input', e => {
-    searchQuery = e.target.value;
+    query = e.target.value;
     render();
   });
 
