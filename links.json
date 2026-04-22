@@ -180,6 +180,15 @@
     "addedAt": "2026-04-22T11:35:00"
   },
   {
+    "id": "screensdesign",
+    "title": "ScreensDesign",
+    "url": "https://screensdesign.com/",
+    "description": "Biblioteca de UI de apps iOS reais com foco em onboarding flows, paywalls e App Store creatives. Referência prática para designers e times de produto que querem ver como apps de sucesso estruturam suas telas de entrada e monetização.",
+    "thumbnail": "https://picsum.photos/seed/screensdesign/400/225",
+    "tags": ["#design", "#ui", "#ux", "#reference", "#mobile", "#inspiration"],
+    "addedAt": "2026-04-22T16:50:00"
+  },
+  {
     "id": "unsection",
     "title": "Unsection",
     "url": "https://www.unsection.com",
