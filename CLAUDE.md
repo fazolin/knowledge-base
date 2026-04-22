@@ -6,6 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with th
 
 Personal knowledge base for storing and organizing links and references — both professional and personal. Links are categorized with hashtags and stored in `links.json`. The `index.html` renders them visually with filtering, search and timeline grouped by year/month.
 
+## Branch
+
+Always work on `main`. Never create or switch to other branches.
+
 ## Adding a Link
 
 When the user pastes a URL (or batch of URLs):
