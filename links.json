@@ -112,6 +112,14 @@
     "addedAt": "2026-04-22"
   },
   {
+    "id": "mediapipe-touchdesigner",
+    "title": "MediaPipe TouchDesigner Plugin",
+    "url": "https://github.com/torinmb/mediapipe-touchdesigner",
+    "description": "Plugin GPU-acelerado e self-contained para usar todos os modelos de visão do MediaPipe dentro do TouchDesigner. Roda sem instalação no Mac e PC, os modelos ML ficam dentro do sistema de arquivos virtual do TD e se comunicam via WebSocket local.",
+    "tags": ["#touchdesigner", "#mediapipe", "#computer-vision", "#open-source", "#creative-coding", "#interactive", "#tools"],
+    "addedAt": "2026-04-22"
+  },
+  {
     "id": "td-unreal-engine-mediapipe",
     "title": "TouchDesigner + Unreal Engine: Hand Tracking com MediaPipe",
     "url": "https://www.youtube.com/watch?v=ZVutQfK7k0o",
