@@ -84,6 +84,17 @@ function render() {
 }
 
 /* ── Helpers ── */
+const GENERIC_TAGS = new Set(['professional','open-source','self-hosted','tools','reference','tutorial','content','marketing']);
+
+function unsplashUrl(tags, title) {
+  const keywords = tags
+    .map(t => t.replace('#', ''))
+    .filter(t => !GENERIC_TAGS.has(t))
+    .slice(0, 3);
+  if (!keywords.length) keywords.push(title.split(' ')[0]);
+  return `https://source.unsplash.com/800x450/?${encodeURIComponent(keywords.join(','))}`;
+}
+
 function grad(id) {
   let h = 0;
   for (let i = 0; i < id.length; i++) h = (id.charCodeAt(i) + ((h << 5) - h)) | 0;
@@ -97,7 +108,7 @@ function host(url) {
   catch { return ''; }
 }
 
-function noThumbHtml(id, title, domain) {
+function gradFallback(id, title, domain) {
   const g = grad(id);
   return `
     <div class="card-nothumb">
@@ -110,7 +121,7 @@ function noThumbHtml(id, title, domain) {
 }
 
 window.onImgErr = (img, id, title, domain) => {
-  img.closest('.card-img-wrap').outerHTML = noThumbHtml(id, title, domain);
+  img.closest('.card-img-wrap').outerHTML = gradFallback(id, title, domain);
 };
 
 function makeCard(l) {
@@ -124,15 +135,12 @@ function makeCard(l) {
   const safeTitle = l.title.replace(/'/g, "\\'").replace(/"/g, '&quot;');
   const safeDomain = domain.replace(/'/g, "\\'");
 
-  let media;
-  if (l.thumbnail) {
-    media = `<div class="card-img-wrap">
-      <img class="card-img" src="${l.thumbnail}" alt="${l.title}" loading="lazy"
-        onerror="onImgErr(this,'${l.id}','${safeTitle}','${safeDomain}')">
-    </div>`;
-  } else {
-    media = noThumbHtml(l.id, l.title, domain);
-  }
+  const thumbSrc = l.thumbnail || unsplashUrl(l.tags, l.title);
+
+  let media = `<div class="card-img-wrap">
+    <img class="card-img" src="${thumbSrc}" alt="${l.title}" loading="lazy"
+      onerror="onImgErr(this,'${l.id}','${safeTitle}','${safeDomain}')">
+  </div>`;
 
   const pills = l.tags.slice(0, 3).map(t =>
     `<span class="pill">${t.replace('#', '')}</span>`
