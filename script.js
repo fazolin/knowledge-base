@@ -135,7 +135,7 @@ function makeCard(l) {
   const safeTitle = l.title.replace(/'/g, "\\'").replace(/"/g, '&quot;');
   const safeDomain = domain.replace(/'/g, "\\'");
 
-  const thumbSrc = l.thumbnail || unsplashUrl(l.tags, l.title);
+  const thumbSrc = l.thumbnail || `https://picsum.photos/seed/${l.id}/400/225`;
 
   let media = `<div class="card-img-wrap">
     <img class="card-img" src="${thumbSrc}" alt="${l.title}" loading="lazy"
