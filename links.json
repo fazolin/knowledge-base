@@ -180,6 +180,15 @@
     "addedAt": "2026-04-22T11:35:00"
   },
   {
+    "id": "unsection",
+    "title": "Unsection",
+    "url": "https://www.unsection.com",
+    "description": "Biblioteca com 3.000+ seções de sites reais organizadas por tipo — hero, CTA, pricing, features, testimonials e mais. Referência prática para quando você precisa de inspiração para uma seção específica.",
+    "thumbnail": "https://picsum.photos/seed/unsection/400/225",
+    "tags": ["#design", "#ui", "#ux", "#reference", "#frontend", "#inspiration"],
+    "addedAt": "2026-04-22T16:45:00"
+  },
+  {
     "id": "toolfolio",
     "title": "Toolfolio",
     "url": "https://toolfolio.io/",
