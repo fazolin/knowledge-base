@@ -110,19 +110,18 @@ function host(url) {
 
 function gradFallback(id, title, domain) {
   const g = grad(id);
-  return `<div class="card-media">
+  return `
     <div class="card-nothumb">
       <div class="nt-bg" style="background:${g}"></div>
       <div class="nt-grain"></div>
       <div class="nt-scrim"></div>
       <div class="nt-title-bg">${title}</div>
       <span class="nt-domain">${domain}</span>
-    </div>
-  </div>`;
+    </div>`;
 }
 
 window.onImgErr = (img, id, title, domain) => {
-  img.closest('.card-media').outerHTML = gradFallback(id, title, domain);
+  img.closest('.card-img-wrap').outerHTML = gradFallback(id, title, domain);
 };
 
 function makeCard(l) {
@@ -135,13 +134,12 @@ function makeCard(l) {
   const domain = host(l.url);
   const safeTitle = l.title.replace(/'/g, "\\'").replace(/"/g, '&quot;');
   const safeDomain = domain.replace(/'/g, "\\'");
+
   const thumbSrc = l.thumbnail || unsplashUrl(l.tags, l.title);
 
-  const media = `<div class="card-media">
+  let media = `<div class="card-img-wrap">
     <img class="card-img" src="${thumbSrc}" alt="${l.title}" loading="lazy"
       onerror="onImgErr(this,'${l.id}','${safeTitle}','${safeDomain}')">
-    <div class="card-media-scrim"></div>
-    <div class="card-title-overlay">${l.title}</div>
   </div>`;
 
   const pills = l.tags.slice(0, 3).map(t =>
@@ -150,6 +148,7 @@ function makeCard(l) {
 
   a.innerHTML = `${media}
     <div class="card-body">
+      <div class="card-title">${l.title}</div>
       ${l.description ? `<div class="card-desc">${l.description}</div>` : ''}
       <div class="card-footer">
         <div class="card-pills">${pills}</div>
