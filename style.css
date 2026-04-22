@@ -90,6 +90,23 @@ body {
   letter-spacing: 0.04em;
 }
 
+.qr-wrap {
+  display: block;
+  opacity: 0.35;
+  transition: opacity 0.2s;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.qr-wrap:hover { opacity: 0.8; }
+
+#qr-img {
+  display: block;
+  width: 52px;
+  height: 52px;
+}
+
 /* ─── TAGS ─── */
 .tags-section {
   max-width: 1360px;
@@ -380,6 +397,7 @@ main {
   #tag-search:focus { width: 100%; }
   .masonry { column-count: 2; }
   .brand-title { letter-spacing: -1px; font-size: clamp(28px, 8vw, 40px); }
+  .qr-wrap { display: none; }
 }
 
 @media (max-width: 420px) {

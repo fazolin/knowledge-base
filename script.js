@@ -6,6 +6,14 @@ async function init() {
   all = await fetch('links.json').then(r => r.json());
   buildTags();
   render();
+  buildQR();
+}
+
+function buildQR() {
+  const url = window.location.href;
+  const api = `https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=${encodeURIComponent(url)}&bgcolor=101010&color=888888&margin=4&format=svg`;
+  document.getElementById('qr-img').src = api;
+  document.getElementById('qr-link').href = url;
 }
 
 /* ── Tags ── */
