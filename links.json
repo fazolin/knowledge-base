@@ -180,6 +180,24 @@
     "addedAt": "2026-04-22T11:35:00"
   },
   {
+    "id": "civitai",
+    "title": "Civitai",
+    "url": "https://civitai.com/",
+    "description": "Plataforma de compartilhamento de modelos, LoRAs, embeddings e recursos para geração de imagens com IA. Hub principal da comunidade Stable Diffusion com milhares de modelos gratuitos.",
+    "thumbnail": "https://picsum.photos/seed/civitai/400/225",
+    "tags": ["#ai", "#generative-ai", "#image-generation", "#tools", "#community", "#open-source"],
+    "addedAt": "2026-04-22T16:10:00"
+  },
+  {
+    "id": "huggingface",
+    "title": "Hugging Face",
+    "url": "https://huggingface.co",
+    "description": "Principal hub de modelos, datasets e demos de machine learning. Repositório central para modelos open-source de IA, com Spaces para testar aplicações diretamente no browser.",
+    "thumbnail": "https://picsum.photos/seed/huggingface/400/225",
+    "tags": ["#ai", "#open-source", "#tools", "#machine-learning", "#developer-tools"],
+    "addedAt": "2026-04-22T16:11:00"
+  },
+  {
     "id": "stable-diffusion-webui",
     "title": "Stable Diffusion web UI",
     "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
