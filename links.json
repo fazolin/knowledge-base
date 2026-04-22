@@ -180,6 +180,15 @@
     "addedAt": "2026-04-22T11:35:00"
   },
   {
+    "id": "pi-mono",
+    "title": "pi-mono",
+    "url": "https://github.com/badlogic/pi-mono",
+    "description": "Monorepo open-source com toolkit completo para agentes de IA: CLI de coding agent, API unificada para múltiplos LLMs, runtime de agente com tool calling, UI para terminal, componentes web e bot de Slack.",
+    "thumbnail": "https://picsum.photos/seed/pi-mono/400/225",
+    "tags": ["#ai", "#open-source", "#developer-tools", "#automation", "#workflow", "#claude-code"],
+    "addedAt": "2026-04-22T16:15:00"
+  },
+  {
     "id": "civitai",
     "title": "Civitai",
     "url": "https://civitai.com/",
