@@ -180,6 +180,15 @@
     "addedAt": "2026-04-22T11:35:00"
   },
   {
+    "id": "jitter-video",
+    "title": "Jitter",
+    "url": "https://jitter.video/",
+    "description": "Ferramenta de motion design no browser para criar animações profissionais sem experiência prévia. Exporta em 4K, GIF e Lottie, integra com Figma e tem biblioteca de templates prontos.",
+    "thumbnail": "https://picsum.photos/seed/jitter-video/400/225",
+    "tags": ["#design", "#motion-graphics", "#animation", "#tools", "#ui", "#ux", "#frontend"],
+    "addedAt": "2026-04-22T16:35:00"
+  },
+  {
     "id": "mapcn",
     "title": "mapcn",
     "url": "https://github.com/AnmolSaini16/mapcn",
