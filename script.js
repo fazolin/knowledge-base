@@ -164,4 +164,11 @@ document.getElementById('search').addEventListener('input', e => {
   render();
 });
 
+document.getElementById('tag-search').addEventListener('input', e => {
+  const val = e.target.value.toLowerCase().replace('#', '');
+  document.querySelectorAll('.tag-btn').forEach(btn => {
+    btn.style.display = val && !btn.textContent.toLowerCase().includes(val) ? 'none' : '';
+  });
+});
+
 init();
