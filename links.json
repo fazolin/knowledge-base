@@ -117,5 +117,23 @@
     "thumbnail": "https://github.com/kestra-io.png",
     "tags": ["#orchestration", "#workflow", "#etl", "#open-source", "#self-hosted", "#professional"],
     "addedAt": "2026-04-22"
+  },
+  {
+    "id": "td-unreal-engine-mediapipe",
+    "title": "TouchDesigner + Unreal Engine: Hand Tracking com MediaPipe",
+    "url": "https://www.youtube.com/watch?v=ZVutQfK7k0o",
+    "description": "Tutorial iniciante: como conectar TouchDesigner e Unreal Engine para motion graphics interativos. Usa MediaPipe para rastrear mãos via OSC e acionar ferramentas de motion graphics no Unreal.",
+    "thumbnail": "https://img.youtube.com/vi/ZVutQfK7k0o/maxresdefault.jpg",
+    "tags": ["#touchdesigner", "#unreal-engine", "#mediapipe", "#motion-graphics", "#interactive", "#tutorial", "#creative-coding", "#installation"],
+    "addedAt": "2026-04-22"
+  },
+  {
+    "id": "td-particles-from-textures",
+    "title": "TouchDesigner: Partículas 3D a partir de Texturas com POPs",
+    "url": "https://www.youtube.com/watch?v=q3WKf6CfrOQ",
+    "description": "Como gerar partículas 3D a partir de texturas usando os novos workflows de POP no TouchDesigner. Inclui padrões TOP animados por LFO, conversão de textura em geometria 3D e atributos de cor.",
+    "thumbnail": "https://img.youtube.com/vi/q3WKf6CfrOQ/maxresdefault.jpg",
+    "tags": ["#touchdesigner", "#particles", "#3d", "#vfx", "#tutorial", "#creative-coding", "#pops"],
+    "addedAt": "2026-04-22"
   }
 ]
