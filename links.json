@@ -180,6 +180,15 @@
     "addedAt": "2026-04-22T11:35:00"
   },
   {
+    "id": "modly",
+    "title": "Modly",
+    "url": "https://github.com/lightningpixel/modly",
+    "description": "App desktop open-source que gera modelos 3D a partir de qualquer imagem usando IA local. Roda 100% na GPU sem nenhuma API externa — drop de imagem, mesh 3D instantâneo.",
+    "thumbnail": "https://picsum.photos/seed/modly/400/225",
+    "tags": ["#ai", "#3d", "#open-source", "#tools", "#self-hosted", "#generative-ai", "#creative-coding"],
+    "addedAt": "2026-04-23T09:14:00"
+  },
+  {
     "id": "screensdesign",
     "title": "ScreensDesign",
     "url": "https://screensdesign.com/",
