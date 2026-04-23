@@ -304,5 +304,14 @@
     "thumbnail": "https://img.youtube.com/vi/0WkixvqnPXw/hqdefault.jpg",
     "tags": ["#tutorial", "#3d", "#ai", "#open-source", "#creative-coding", "#motion-graphics", "#blender", "#comfyui"],
     "addedAt": "2026-04-22T15:30:00"
+  },
+  {
+    "id": "ai-animation-locally-free",
+    "title": "AI Animation Running Now Locally for FREE (6gb vram)",
+    "url": "https://youtu.be/nNmeuvew8LY?si=rBVKROqlp3g4X6RB",
+    "description": "Tutorial mostrando como rodar animação 3D com IA localmente e de graça com apenas 6GB de VRAM, sem depender de serviços em nuvem ou ferramentas pagas.",
+    "thumbnail": "https://img.youtube.com/vi/nNmeuvew8LY/hqdefault.jpg",
+    "tags": ["#ai", "#tutorial", "#3d", "#animation", "#open-source", "#creative-coding"],
+    "addedAt": "2026-04-23T00:00:00"
   }
 ]
