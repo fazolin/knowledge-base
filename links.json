@@ -315,6 +315,15 @@
     "addedAt": "2026-04-23T00:00:00"
   },
   {
+    "id": "kimodo",
+    "title": "Kimodo: Scaling Controllable Human Motion Generation",
+    "url": "https://research.nvidia.com/labs/sil/projects/kimodo/",
+    "description": "Modelo de difusão da NVIDIA treinado em 700 horas de motion capture para gerar movimentos 3D humanos e robóticos controlados por texto e restrições cinemáticas. Gera animações em 2–5 segundos em uma única GPU.",
+    "thumbnail": "https://picsum.photos/seed/kimodo/400/225",
+    "tags": ["#ai", "#3d", "#animation", "#motion-graphics", "#research", "#tools", "#interactive"],
+    "addedAt": "2026-04-25T12:23:00"
+  },
+  {
     "id": "hyperframes",
     "title": "HyperFrames",
     "url": "https://github.com/heygen-com/hyperframes",
