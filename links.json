@@ -313,5 +313,14 @@
     "thumbnail": "https://img.youtube.com/vi/nNmeuvew8LY/hqdefault.jpg",
     "tags": ["#ai", "#tutorial", "#3d", "#animation", "#open-source", "#creative-coding"],
     "addedAt": "2026-04-23T00:00:00"
+  },
+  {
+    "id": "hyperframes",
+    "title": "HyperFrames",
+    "url": "https://github.com/heygen-com/hyperframes",
+    "description": "Framework open-source da HeyGen que renderiza HTML, CSS e JavaScript frame a frame em vídeos MP4 em 1080p. Permite que agentes de IA componham vídeos escrevendo código, com suporte a GSAP, Lottie, Three.js e streaming.",
+    "thumbnail": "https://picsum.photos/seed/hyperframes/400/225",
+    "tags": ["#open-source", "#ai", "#tools", "#frontend", "#developer-tools", "#automation", "#video"],
+    "addedAt": "2026-04-25T12:23:00"
   }
 ]
