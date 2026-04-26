@@ -315,6 +315,15 @@
     "addedAt": "2026-04-23T00:00:00"
   },
   {
+    "id": "design-spells",
+    "title": "Design Spells",
+    "url": "https://www.designspells.com",
+    "description": "Biblioteca curada de micro-interações, easter eggs e detalhes de design que adicionam personalidade e encanto às interfaces digitais. Referência para quem quer inspiração em animações e interações sutis.",
+    "thumbnail": "https://picsum.photos/seed/design-spells/400/225",
+    "tags": ["#design", "#ux", "#ui", "#animation", "#interactive", "#reference", "#frontend"],
+    "addedAt": "2026-04-26T00:00:00"
+  },
+  {
     "id": "21st-dev",
     "title": "21st.dev",
     "url": "https://21st.dev/home",
