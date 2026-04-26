@@ -315,6 +315,15 @@
     "addedAt": "2026-04-23T00:00:00"
   },
   {
+    "id": "framer-motion",
+    "title": "Framer Motion",
+    "url": "https://www.npmjs.com/package/framer-motion",
+    "description": "Biblioteca de animações para React com API declarativa e simples. Suporta gestos, transições de layout, animações físicas e scroll-driven com alta performance.",
+    "thumbnail": "https://picsum.photos/seed/framer-motion/400/225",
+    "tags": ["#frontend", "#animation", "#tools", "#developer-tools", "#ui", "#react"],
+    "addedAt": "2026-04-26T00:00:00"
+  },
+  {
     "id": "kimodo",
     "title": "Kimodo: Scaling Controllable Human Motion Generation",
     "url": "https://research.nvidia.com/labs/sil/projects/kimodo/",
