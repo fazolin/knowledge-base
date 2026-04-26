@@ -315,6 +315,15 @@
     "addedAt": "2026-04-23T00:00:00"
   },
   {
+    "id": "ui-ux-pro-max-skill",
+    "title": "UI UX Pro Max Skill",
+    "url": "https://ui-ux-pro-max-skill.nextlevelbuilder.io",
+    "description": "Skill de IA para o Claude Code que adiciona inteligência de design: 50+ estilos visuais, 161 paletas de cores, 57 combinações de fontes e gerador de design systems completos. Suporta 10 stacks de tecnologia e 99 diretrizes de UX.",
+    "thumbnail": "https://picsum.photos/seed/ui-ux-pro-max-skill/400/225",
+    "tags": ["#claude-code", "#claude-plugin", "#ui", "#ux", "#design", "#frontend", "#developer-tools", "#tools"],
+    "addedAt": "2026-04-26T00:00:00"
+  },
+  {
     "id": "framer-motion",
     "title": "Framer Motion",
     "url": "https://www.npmjs.com/package/framer-motion",
