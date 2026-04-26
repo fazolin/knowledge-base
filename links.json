@@ -315,6 +315,15 @@
     "addedAt": "2026-04-23T00:00:00"
   },
   {
+    "id": "21st-dev",
+    "title": "21st.dev",
+    "url": "https://21st.dev/home",
+    "description": "Plataforma open-source com registry de componentes React gerados por IA, registry de agentes Claude e SDK TypeScript para construir agentes com chat UI, observabilidade e deploy em um comando. Usado por 1.4M de desenvolvedores.",
+    "thumbnail": "https://picsum.photos/seed/21st-dev/400/225",
+    "tags": ["#ai", "#open-source", "#developer-tools", "#frontend", "#tools", "#automation", "#react", "#claude-plugin"],
+    "addedAt": "2026-04-26T00:00:00"
+  },
+  {
     "id": "ui-ux-pro-max-skill",
     "title": "UI UX Pro Max Skill",
     "url": "https://ui-ux-pro-max-skill.nextlevelbuilder.io",
