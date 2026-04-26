@@ -315,6 +315,15 @@
     "addedAt": "2026-04-23T00:00:00"
   },
   {
+    "id": "td-depth-anything",
+    "title": "TDDepthAnything",
+    "url": "https://github.com/olegchomp/TDDepthAnything",
+    "description": "Implementação do Depth Anything e Depth Anything V2 no TouchDesigner com TensorRT para estimativa de profundidade monocular em tempo real. Suporta modelos small, base, large e giant via CUDA.",
+    "thumbnail": "https://picsum.photos/seed/td-depth-anything/400/225",
+    "tags": ["#touchdesigner", "#ai", "#open-source", "#creative-coding", "#3d", "#interactive", "#tools"],
+    "addedAt": "2026-04-26T00:00:00"
+  },
+  {
     "id": "headsta-sh",
     "title": "Shady Headstash",
     "url": "https://www.headsta.sh",
