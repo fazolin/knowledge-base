@@ -315,6 +315,15 @@
     "addedAt": "2026-04-23T00:00:00"
   },
   {
+    "id": "headsta-sh",
+    "title": "Shady Headstash",
+    "url": "https://www.headsta.sh",
+    "description": "Biblioteca gratuita de plugins ISF, shaders e patches para Resolume e Synesthesia. Inclui efeitos de cor, distorção e conversões do Shadertoy prontas para uso em VJ e motion graphics ao vivo.",
+    "thumbnail": "https://picsum.photos/seed/headsta-sh/400/225",
+    "tags": ["#tools", "#creative-coding", "#motion-graphics", "#interactive", "#reference", "#vj", "#glsl"],
+    "addedAt": "2026-04-26T00:00:00"
+  },
+  {
     "id": "motion-synthesizer",
     "title": "Motion Synthesizer",
     "url": "https://github.com/ginonave/Motion-Synthesizer",
