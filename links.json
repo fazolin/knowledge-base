@@ -1,5 +1,14 @@
 [
   {
+    "id": "strayspark-studio",
+    "title": "StraySpark",
+    "url": "https://www.strayspark.studio/",
+    "description": "Estúdio de ferramentas e plugins profissionais para Unreal Engine 5, com código-fonte completo e licença vitalícia. Oferece Procedural Placement Tool, Cinematic Spline Tool, Blueprint Template Library e servidores MCP para automação do editor com IA.",
+    "thumbnail": "https://picsum.photos/seed/strayspark-studio/400/225",
+    "tags": ["#tools", "#developer-tools", "#3d", "#ai", "#interactive", "#open-source"],
+    "addedAt": "2026-04-27T00:00:00"
+  },
+  {
     "id": "open-generative-ai",
     "title": "Open Generative AI",
     "url": "https://github.com/Anil-matcha/Open-Generative-AI",
