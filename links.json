@@ -1,5 +1,14 @@
 [
   {
+    "id": "claude-for-creative-work",
+    "title": "Claude for Creative Work",
+    "url": "https://www.anthropic.com/news/claude-for-creative-work",
+    "description": "Anthropic lança conectores do Claude para ferramentas criativas profissionais: Adobe Creative Cloud, Blender, Ableton, Autodesk Fusion, Affinity e Splice. Permite controlar e colaborar com esses softwares via linguagem natural, acelerando a criação sem substituir o processo humano.",
+    "thumbnail": "https://picsum.photos/seed/claude-for-creative-work/400/225",
+    "tags": ["#ai", "#tools", "#design", "#3d", "#creative-coding", "#claude-plugin", "#workflow"],
+    "addedAt": "2026-04-28T00:00:00"
+  },
+  {
     "id": "strayspark-studio",
     "title": "StraySpark",
     "url": "https://www.strayspark.studio/",
