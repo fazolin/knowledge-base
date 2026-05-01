@@ -1,5 +1,14 @@
 [
   {
+    "id": "aiartists",
+    "title": "AIArtists.org",
+    "url": "https://aiartists.org",
+    "description": "Primeiro repositório mundial dedicado ao impacto da IA na arte e cultura. Reúne perfis dos principais artistas que trabalham com inteligência artificial, ferramentas de criação e uma linha do tempo da história da arte generativa.",
+    "thumbnail": "https://picsum.photos/seed/aiartists/400/225",
+    "tags": ["#ai", "#design", "#reference", "#creative-coding", "#generative-ai"],
+    "addedAt": "2026-05-01T00:00:00"
+  },
+  {
     "id": "claude-for-creative-work",
     "title": "Claude for Creative Work",
     "url": "https://www.anthropic.com/news/claude-for-creative-work",
