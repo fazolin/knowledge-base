@@ -1,5 +1,14 @@
 [
   {
+    "id": "freemocap",
+    "title": "FreeMoCap",
+    "url": "https://github.com/freemocap/freemocap",
+    "description": "Sistema de captura de movimento markerless, gratuito e open-source, que funciona com webcams, GoPros ou smartphones comuns. Sem trajes caros, sem câmeras especiais — processamento local com visão computacional e machine learning.",
+    "thumbnail": "https://picsum.photos/seed/freemocap/400/225",
+    "tags": ["#open-source", "#3d", "#motion-graphics", "#ai", "#tools", "#creative-coding"],
+    "addedAt": "2026-05-07T00:00:00"
+  },
+  {
     "id": "aiartists",
     "title": "AIArtists.org",
     "url": "https://aiartists.org",
