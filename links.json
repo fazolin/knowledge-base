@@ -1,5 +1,14 @@
 [
   {
+    "id": "luma-dream-machine",
+    "title": "Luma Dream Machine",
+    "url": "https://lumalabs.ai/app",
+    "description": "Plataforma de geração de vídeo e imagem com IA da Luma Labs. O modelo Ray3 oferece realismo de ponta, física coerente e consistência de personagens em texto→vídeo e imagem→vídeo. Inclui também captura 3D via smartphone com NeRFs interativos embeddáveis.",
+    "thumbnail": "https://picsum.photos/seed/luma-dream-machine/400/225",
+    "tags": ["#ai", "#video-generation", "#3d", "#tools", "#creative-coding", "#motion-graphics"],
+    "addedAt": "2026-05-11T00:00:00"
+  },
+  {
     "id": "freemocap",
     "title": "FreeMoCap",
     "url": "https://github.com/freemocap/freemocap",
