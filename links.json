@@ -1,5 +1,14 @@
 [
   {
+    "id": "mediapipe-touchdesigner",
+    "title": "MediaPipe TouchDesigner",
+    "url": "https://github.com/torinmb/mediapipe-touchdesigner",
+    "description": "Plugin acelerado por GPU que integra todos os modelos de visão do MediaPipe (pose, mãos, face, segmentação) diretamente no TouchDesigner. Roda como arquivo .tox standalone no Mac e PC, sem instalação, usando WebAssembly e WebSocket local.",
+    "thumbnail": "https://picsum.photos/seed/mediapipe-touchdesigner/400/225",
+    "tags": ["#touchdesigner", "#open-source", "#ai", "#interactive", "#creative-coding", "#tools"],
+    "addedAt": "2026-05-15T00:00:00"
+  },
+  {
     "id": "luma-dream-machine",
     "title": "Luma Dream Machine",
     "url": "https://lumalabs.ai/app",
